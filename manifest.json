@@ -1,7 +1,7 @@
 {
   "name": "Forum Support theme - a fork of Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
-  "version": "0.2.0",
+  "version": "0.2.0.1",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
@@ -11,7 +11,7 @@
       "type": "color",
       "description": "brand_color_description",
       "label": "brand_color_label",
-      "value": "#C9510D"
+      "value": "#006179"
     }, {
       "identifier": "brand_text_color",
       "type": "color",
@@ -29,7 +29,7 @@
       "type": "color",
       "description": "link_color_description",
       "label": "link_color_label",
-      "value": "#C9510D"
+      "value": "#006179"
     }, {
       "identifier": "background_color",
       "type": "color",
