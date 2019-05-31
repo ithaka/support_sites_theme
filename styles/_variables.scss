@@ -4,13 +4,13 @@
 $brand_color: #006179 !default;
 $brand_text_color: #fff !default; //Color for text with an accent color background
 $text_color: #000 !default;
-$link_color: #006179 !default;
+$link_color: $brand_color !default;
 $secondary_link_color: #555555;
 $secondary_link_hover: #333333;
 $background_color: #fff !default;
 
-$visited-link-color: #993e0a;
-$hover-button-color: #993e0a;
+$visited-link-color: #1291ae;
+$hover-button-color: $visited-link-color;
 $secondary-text-color: zass-lighten($text_color, 20%);
 
 $primary-shade: zass-darken($background_color, 3%); //#f8f8f8 for the default background_color

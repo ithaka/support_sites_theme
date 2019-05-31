@@ -61,7 +61,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 input,
@@ -280,8 +280,8 @@ ul.list-horizontal li {
 }
 
 .button[aria-selected="true"]:hover, .button[aria-selected="true"]:focus, .button[aria-selected="true"]:active, [role="button"][aria-selected="true"]:hover, [role="button"][aria-selected="true"]:focus, [role="button"][aria-selected="true"]:active {
-  background-color: #993e0a;
-  border-color: #993e0a;
+  background-color: #1291ae;
+  border-color: #1291ae;
 }
 
 .button[data-disabled], [role="button"][data-disabled] {
@@ -308,7 +308,7 @@ ul.list-horizontal li {
 }
 
 .button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background-color: #993e0a;
+  background-color: #1291ae;
 }
 
 .button-large[disabled], input[type="submit"][disabled] {
@@ -494,7 +494,7 @@ table td, table th {
 }
 
 .form .suggestion-list li a:visited {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 /***** Header *****/
@@ -1366,7 +1366,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .category-content {
-    flex: 0 0 80%;
+    flex: 1 0 80%;
   }
 }
 
@@ -1601,7 +1601,7 @@ table td, table th {
 }
 
 .article-body a:visited {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 .article-body code {
@@ -1830,8 +1830,8 @@ table td, table th {
 }
 
 .article-unsubscribe:hover {
-  background-color: #993e0a;
-  border-color: #993e0a;
+  background-color: #1291ae;
+  border-color: #1291ae;
 }
 
 .sidenav-title {
@@ -2185,7 +2185,7 @@ table td, table th {
 }
 
 .comment-body a:visited {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 .comment-body code {
@@ -2265,7 +2265,7 @@ table td, table th {
 }
 
 .vote-voted:hover::before {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 /***** Actions *****/
@@ -2423,8 +2423,8 @@ table td, table th {
 }
 
 .community-follow [role="button"][aria-selected="true"]:hover {
-  background-color: #993e0a;
-  border-color: #993e0a;
+  background-color: #1291ae;
+  border-color: #1291ae;
 }
 
 .community-follow [role="button"]::after {
@@ -2489,7 +2489,7 @@ table td, table th {
 }
 
 .striped-list-title:visited {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 .striped-list .meta-group {
@@ -2761,7 +2761,7 @@ table td, table th {
 }
 
 .post-body a:visited {
-  color: #993e0a;
+  color: #1291ae;
 }
 
 .post-body code {
@@ -3267,7 +3267,7 @@ table td, table th {
 }
 
 .subscriptions-unsubscribe a:hover {
-  background-color: #993e0a;
+  background-color: #1291ae;
   text-decoration: none;
 }
 
