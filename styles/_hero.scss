@@ -1,6 +1,7 @@
 /***** Hero component *****/
 .hero {
-  background: #e8e8e8 center;
+  background-image: url($homepage_background_image);
+  background-position: center;
   background-size: cover;
   height: 220px;
   margin: 20px 0 !important;
