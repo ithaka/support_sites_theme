@@ -748,16 +748,6 @@ table td, table th {
   }
 }
 
-.footer-logo {
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .footer-logo {
-    width: 16.6667%;
-  }
-}
-
 .footer-links {
   width: 100%;
   padding-bottom: 10px;
@@ -765,7 +755,8 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .footer-links {
-    width: 58.3333%;
+    width: 66.67%;
+    padding-left: 0 !important;
   }
 }
 
@@ -784,7 +775,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .footer-legal {
-    width: 25%;
+    width: 33.33%;
   }
 }
 
@@ -990,7 +981,8 @@ table td, table th {
 
 /***** Hero component *****/
 .hero {
-  background: #e8e8e8 center;
+  background-image: url($homepage_background_image);
+  background-position: center;
   background-size: cover;
   height: 220px;
   margin: 20px 0 !important;
@@ -1238,6 +1230,8 @@ table td, table th {
 @media (min-width: 1024px) {
   .popular-topics {
     top: 50px;
+    max-width: 60%;
+    margin: 0 auto;
   }
 }
 
@@ -1967,6 +1961,10 @@ table td, table th {
 
 .share-linkedin::before {
   content: "\f0e1";
+}
+
+.share-youtube::before {
+  content: "\f167";
 }
 
 /***** Comments *****/
