@@ -36,6 +36,8 @@
 .popular-topics {
   @include desktop {
     top: 50px;
+    max-width: 60%;
+    margin: 0 auto;
   }
     font-size: $font-size-small;
     position: relative; 
