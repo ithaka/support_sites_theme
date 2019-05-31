@@ -1,7 +1,7 @@
 {
-  "name": "Artstor Support Theme based on Zendesk Copenhagen",
+  "name": "Forum Support theme - a fork of Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
-  "version": "0.1.24",
+  "version": "0.2.0",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
