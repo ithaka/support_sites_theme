@@ -45,12 +45,12 @@
 
     a {
       padding: 0 5px;
-      color: $secondary_link_color;
+      color: $brand_text_color;
 
     &:hover,
     &:active,
     &:focus, {
-      color: $secondary_link_hover;
+      color: $brand_text_color;
       text-decoration: none;
     }
   }
