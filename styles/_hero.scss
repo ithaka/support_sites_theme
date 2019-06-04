@@ -1,8 +1,8 @@
 /***** Hero component *****/
 .hero {
-  background-image: url($homepage_background_image);
-  background-position: center;
+  background: $hero_background;
   background-size: cover;
+  color: $brand_text_color;
   height: 220px;
   margin: 20px 0 !important;
   padding: 0 20px;
