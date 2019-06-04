@@ -981,9 +981,9 @@ table td, table th {
 
 /***** Hero component *****/
 .hero {
-  background-image: url($homepage_background_image);
-  background-position: center;
+  background: #4b525f;
   background-size: cover;
+  color: $brand_text_color;
   height: 220px;
   margin: 20px 0 !important;
   padding: 0 20px;
@@ -1237,11 +1237,11 @@ table td, table th {
 
 .popular-topics a {
   padding: 0 5px;
-  color: #555555;
+  color: $brand_text_color;
 }
 
 .popular-topics a:hover, .popular-topics a:active, .popular-topics a:focus {
-  color: #333333;
+  color: $brand_text_color;
   text-decoration: none;
 }
 
