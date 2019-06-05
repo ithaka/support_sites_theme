@@ -558,7 +558,8 @@ table td, table th {
   display: none;
   font-size: 14px;
   font-weight: 700;
-  padding: 20px 20px 0 0;
+  margin: 20px 20px 0 0;
+  padding: 0;
   text-decoration: none;
   width: auto;
 }
@@ -581,6 +582,18 @@ table td, table th {
 
 .nav-wrapper a.login {
   display: inline-block;
+}
+
+.nav-wrapper a.button {
+  background: $brand_color;
+  border: 1px solid $brand_color;
+  color: $brand_text_color;
+  padding: 0 20px;
+}
+
+.nav-wrapper a.button:hover {
+  background: $brand_text_color;
+  color: $brand_color;
 }
 
 .nav-wrapper .icon-menu {
@@ -712,7 +725,6 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .footer {
-    margin-top: 60px;
     padding-top: 30px;
   }
 }
@@ -1189,13 +1201,9 @@ table td, table th {
 }
 
 /***** Homepage *****/
-.section {
-  margin-bottom: 40px;
-}
-
 @media (min-width: 768px) {
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1964,7 +1972,7 @@ table td, table th {
 }
 
 .share-youtube::before {
-  content: "\f167";
+  content: "\f16a";
 }
 
 /***** Comments *****/
