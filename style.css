@@ -148,6 +148,14 @@ ul.list-horizontal li {
   margin-right: 1.5rem;
 }
 
+ul.checklist, ol.checklist {
+  list-style: none;
+}
+
+ul.checklist:before, ol.checklist:before {
+  content: "\f0c8";
+}
+
 .text-center {
   text-align: center;
 }
