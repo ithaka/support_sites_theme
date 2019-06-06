@@ -2,11 +2,8 @@
 
 .section {
   @include tablet {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
-
-  margin-bottom: 40px;
-
 
   h2 {
     margin-top: 0;
@@ -41,7 +38,7 @@
   }
     font-size: $font-size-small;
     position: relative; 
-    top: 14px;
+    top: 25px;
 
     a {
       padding: 0 5px;
