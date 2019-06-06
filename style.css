@@ -148,14 +148,6 @@ ul.list-horizontal li {
   margin-right: 1.5rem;
 }
 
-ul.checklist, ol.checklist {
-  list-style: none;
-}
-
-ul.checklist:before, ol.checklist:before {
-  content: "\f0c8";
-}
-
 .text-center {
   text-align: center;
 }
@@ -1659,6 +1651,14 @@ table td, table th {
 
 .article-body .noshadow {
   box-shadow: none !important;
+}
+
+.article-body ul.checklist, .article-body ol.checklist {
+  list-style: none;
+}
+
+.article-body ul.checklist li:before, .article-body ol.checklist li:before {
+  content: "\f0c8";
 }
 
 .article-anchorbox {

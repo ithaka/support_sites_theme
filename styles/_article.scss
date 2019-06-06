@@ -93,6 +93,15 @@
     .noshadow {
       box-shadow: none !important;
     }
+    ul, ol {
+      &.checklist {
+        list-style: none;
+        
+        li:before {
+          content: "\f0c8";
+        }
+      } 
+    }
   }
 
   &-anchorbox {

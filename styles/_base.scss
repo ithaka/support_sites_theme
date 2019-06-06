@@ -138,15 +138,6 @@ ul {
   }
 }
 
-ul, ol {
-  &.checklist {
-    list-style: none;
-    &:before {
-      content: "\f0c8";
-    }
-  } 
-}
-
 .text-center {
   text-align: center;
 }
