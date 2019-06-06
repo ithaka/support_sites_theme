@@ -783,11 +783,13 @@ table td, table th {
 
 .footer-legal {
   width: 100%;
+  margin-top: 10px;
 }
 
 @media (min-width: 1024px) {
   .footer-legal {
     width: 33.33%;
+    margin-top: 0;
   }
 }
 
@@ -857,8 +859,7 @@ table td, table th {
 
 .footer .columns {
   float: left;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 0;
 }
 
 @media (min-width: 1024px) {
@@ -996,11 +997,17 @@ table td, table th {
   background: #4b525f;
   background-size: cover;
   color: $brand_text_color;
-  height: 220px;
+  height: 300px;
   margin: 20px 0 !important;
   padding: 0 20px;
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 220px;
+  }
 }
 
 .hero h1 {
@@ -1232,7 +1239,7 @@ table td, table th {
 .popular-topics {
   font-size: 14px;
   position: relative;
-  top: 14px;
+  top: 25px;
 }
 
 @media (min-width: 1024px) {
