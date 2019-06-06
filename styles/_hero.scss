@@ -1,9 +1,13 @@
 /***** Hero component *****/
 .hero {
+  @include desktop {
+    height: 220px;
+  }
+
   background: $hero_background;
   background-size: cover;
   color: $brand_text_color;
-  height: 220px;
+  height: 300px;
   margin: 20px 0 !important;
   padding: 0 20px;
   text-align: center;
@@ -21,7 +25,6 @@
     top: 30%;
     max-width: 500px;
     margin: 0 auto;
-
 
   }
 }
