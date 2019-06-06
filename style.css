@@ -1655,10 +1655,12 @@ table td, table th {
 
 .article-body ul.checklist, .article-body ol.checklist {
   list-style: none;
+  padding: 0;
 }
 
 .article-body ul.checklist li:before, .article-body ol.checklist li:before {
   content: "\f0c8";
+  padding-right: 0;
 }
 
 .article-anchorbox {

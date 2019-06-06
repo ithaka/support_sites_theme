@@ -96,9 +96,11 @@
     ul, ol {
       &.checklist {
         list-style: none;
-        
+        padding: 0;
+
         li:before {
           content: "\f0c8";
+          padding-right: 0;
         }
       } 
     }
