@@ -600,6 +600,7 @@ table td, table th {
 .nav-wrapper a.button:hover {
   background: $brand_text_color;
   color: $brand_color;
+  text-decoration: none;
 }
 
 .nav-wrapper .icon-menu {
@@ -1410,7 +1411,7 @@ table td, table th {
 
 @media (min-width: 768px) {
   .section-tree .section {
-    flex: 0 0 45%;
+    flex: 0 0 75%;
     /* Two columns for tablet and desktop. Leaving 5% separation between columns */
   }
 }
@@ -1739,6 +1740,11 @@ table td, table th {
   }
 }
 
+.article-sidebar h3.sidenav-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 .article-relatives {
   display: flex;
   flex-direction: column;
@@ -1864,27 +1870,14 @@ table td, table th {
   border-color: #1291ae;
 }
 
-.sidenav-title {
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  position: relative;
-}
-
 .sidenav-item {
-  color: $text_color;
+  font-size: 14px;
   display: block;
-  font-weight: 300;
   margin-bottom: 10px;
-  padding: 5px;
 }
 
 .sidenav-item.current-article {
   font-weight: 700;
-}
-
-.sidenav-item:hover {
-  text-decoration: underline;
 }
 
 .recent-articles h3,
