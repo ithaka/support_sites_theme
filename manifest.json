@@ -1,7 +1,7 @@
 {
   "name": "Forum Support theme - a fork of Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
-  "version": "0.2.4",
+  "version": "0.2.4.1",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
@@ -156,7 +156,7 @@
       "type": "checkbox",
       "description": "articles_in_section_description",
       "label": "articles_in_section_label",
-      "value": false
+      "value": true
     }, {
       "identifier": "show_article_author",
       "type": "checkbox",
@@ -186,7 +186,7 @@
       "type": "checkbox",
       "description": "related_articles_description",
       "label": "related_articles_label",
-      "value": true
+      "value": false
     }, {
       "identifier": "show_article_sharing",
       "type": "checkbox",
