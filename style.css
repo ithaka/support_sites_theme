@@ -1740,6 +1740,11 @@ table td, table th {
   }
 }
 
+.article-sidebar h3.sidenav-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 .article-relatives {
   display: flex;
   flex-direction: column;
@@ -1863,11 +1868,6 @@ table td, table th {
 .article-unsubscribe:hover {
   background-color: #1291ae;
   border-color: #1291ae;
-}
-
-.sidenav h3 {
-  font-size: 16px;
-  margin: 0 0 10px;
 }
 
 .sidenav-item {

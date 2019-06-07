@@ -174,6 +174,11 @@
     flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
     margin: 30px 0 0;
     padding: 0;
+
+    h3.sidenav-title {
+      font-size: $font-size-base;
+      margin-bottom: 10px;
+  }
   }
 
   &-relatives {
@@ -301,11 +306,6 @@
 }
 
 .sidenav {
-  h3 {
-    font-size: $font-size-base;
-    margin: 0 0 10px;
-  }
-
   &-item {
     font-size: $font-size-small;
     display: block;
