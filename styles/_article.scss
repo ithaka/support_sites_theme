@@ -301,25 +301,16 @@
 }
 
 .sidenav {
-  &-title {
+  h3 {
     font-size: $font-size-base;
-    font-weight: normal;
-    font-style: italic;
-    position: relative;
   }
 
   &-item {
-    color: $text_color;
     display: block;
-    font-weight: $font-weight-light;
     margin-bottom: 10px;
-    padding: 5px;
 
     &.current-article {
       font-weight: 700;
-    }
-    &:hover {
-      text-decoration: underline;
     }
   }
 }

@@ -1865,27 +1865,17 @@ table td, table th {
   border-color: #1291ae;
 }
 
-.sidenav-title {
+.sidenav h3 {
   font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  position: relative;
 }
 
 .sidenav-item {
-  color: $text_color;
   display: block;
-  font-weight: 300;
   margin-bottom: 10px;
-  padding: 5px;
 }
 
 .sidenav-item.current-article {
   font-weight: 700;
-}
-
-.sidenav-item:hover {
-  text-decoration: underline;
 }
 
 .recent-articles h3,
