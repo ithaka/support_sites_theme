@@ -600,6 +600,7 @@ table td, table th {
 .nav-wrapper a.button:hover {
   background: $brand_text_color;
   color: $brand_color;
+  text-decoration: none;
 }
 
 .nav-wrapper .icon-menu {
@@ -1410,7 +1411,7 @@ table td, table th {
 
 @media (min-width: 768px) {
   .section-tree .section {
-    flex: 0 0 45%;
+    flex: 0 0 75%;
     /* Two columns for tablet and desktop. Leaving 5% separation between columns */
   }
 }
