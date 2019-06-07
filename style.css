@@ -1867,9 +1867,11 @@ table td, table th {
 
 .sidenav h3 {
   font-size: 16px;
+  margin: 0 0 10px;
 }
 
 .sidenav-item {
+  font-size: 14px;
   display: block;
   margin-bottom: 10px;
 }

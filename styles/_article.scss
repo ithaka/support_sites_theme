@@ -303,9 +303,11 @@
 .sidenav {
   h3 {
     font-size: $font-size-base;
+    margin: 0 0 10px;
   }
 
   &-item {
+    font-size: $font-size-small;
     display: block;
     margin-bottom: 10px;
 
