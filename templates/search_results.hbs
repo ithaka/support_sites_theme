@@ -2,7 +2,7 @@
 <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
-    {{search submit=false}}
+    {{search submit=false placeholder='Search our help center'}}
   </nav>
 
   <header id="main-content" class="page-header">
@@ -29,11 +29,9 @@
         </ul>
       {{else}}
         <p>
-          {{t 'no_results' query=query}}
-          {{#link 'help_center'}}
-            {{t 'browse_knowledge_base'}}
-          {{/link}}
-        </p>
+          We couldn't find any support articles related to "{{query}}."
+          Try browsing our {{#link 'help_center'}} help center{{/link}}.
+        </p>          
       {{/if}}
     </section>
   </div>

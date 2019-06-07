@@ -15,11 +15,14 @@ $secondary-text-color: zass-lighten($text_color, 20%);
 
 $primary-shade: zass-darken($background_color, 3%); //#f8f8f8 for the default background_color
 $secondary-shade: zass-darken($background_color, 5%); //#f2f2f2 for the default background_color
+
+//added colors
 $hero-background: #4b525f; //hex used on Forum platform header
 $dark-gray: #333333;
 $med-gray: #cccccc;
 $gray: #e8e8e8; //article anchor box, bottom of footer
 $lighter-gray: #f9f9f9;
+$alert-color: #ffefc3;
 
 $font-size-bigger: 18px;
 $font-size-base: 16px;
