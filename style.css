@@ -348,7 +348,6 @@ table caption {
 
 table th {
   color: $text_color;
-  font-size: 14px;
   font-weight: 700;
   text-align: left;
 }
@@ -382,6 +381,7 @@ table td, table th {
   border: 1px solid #cccccc;
   vertical-align: top;
   text-align: left;
+  font-size: 14px;
 }
 
 /***** Forms *****/
@@ -559,13 +559,13 @@ table td, table th {
 }
 
 .nav-wrapper a {
-  border: 0;
+  border-bottom: 3px solid transparent;
   color: $text_color;
   display: none;
   font-size: 14px;
   font-weight: 700;
   margin: 20px 20px 0 0;
-  padding: 0;
+  padding: 2px 0;
   text-decoration: none;
   width: auto;
 }
@@ -580,10 +580,11 @@ table td, table th {
   padding: 0 0 0 20px;
 }
 
-.nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
+.nav-wrapper a.current, .nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
   background-color: transparent;
+  border-color: $text_color;
   color: $text_color;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav-wrapper a.login {
@@ -1260,6 +1261,7 @@ table td, table th {
 .popular-topics a {
   padding: 0 5px;
   color: $brand_text_color;
+  display: inline-block;
 }
 
 .popular-topics a:hover, .popular-topics a:active, .popular-topics a:focus {
@@ -3769,6 +3771,14 @@ table td, table th {
 
 .icon-notification-success::before {
   content: "\2714";
+}
+
+.fa-check {
+  font-family: 'FontAwesome' !important;
+  color: $text_color;
+  content: "\f00c";
+  display: block;
+  font-size: 16px;
 }
 
 /* User Profiles */
