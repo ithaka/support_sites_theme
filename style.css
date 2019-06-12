@@ -3778,6 +3778,7 @@ table td, table th {
   color: $text_color;
   content: "\f00c";
   display: block;
+  font-size: 16px;
 }
 
 /* User Profiles */
