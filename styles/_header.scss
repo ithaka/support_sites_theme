@@ -47,24 +47,26 @@ $header-height: 71px;
       display: inline-block;
     }
 
-    border: 0;
+    border-bottom: 3px solid transparent;
     color: $text_color;
     display: none;
     font-size: 14px;
     font-weight: $font-weight-bold;
     margin: 20px 20px 0 0;
-    padding: 0;
+    padding: 5px 0;
     text-decoration: none;
     width: auto;
 
     [dir="rtl"] & { padding: 0 0 0 20px;}
 
+    &.current,
     &:hover,
     &:focus,
     &:active {
       background-color: transparent;
+      border-color: $text_color;
       color: $text_color;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     &.login { display: inline-block; }

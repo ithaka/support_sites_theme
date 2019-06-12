@@ -107,3 +107,11 @@
 .icon-notification-success::before {
   content: "\2714";
 }
+
+.fa-check { 
+    font-family: 'FontAwesome' !important;
+    color: $text-color;
+    content: "\f00c";
+    display: block;
+}
+
