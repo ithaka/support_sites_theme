@@ -112,7 +112,8 @@
     font-family: 'FontAwesome' !important;
     color: $text-color;
     content: "\f00c";
-    display: block;
+    display: inline-block;
     font-size: 16px;
+    padding-right: 5px;
 }
 

@@ -3777,8 +3777,9 @@ table td, table th {
   font-family: 'FontAwesome' !important;
   color: $text_color;
   content: "\f00c";
-  display: block;
+  display: inline-block;
   font-size: 16px;
+  padding-right: 5px;
 }
 
 /* User Profiles */
