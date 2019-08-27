@@ -2,6 +2,33 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HC7SLD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- Start of status page code -->
+<script src="{{asset 'statuspage.js'}}"></script>
+<!--Below is what generates the banner HTML-->
+
+<div id = "errormessage" style="display:None"></div>
+
+<script>
+   var client = StatusPage("dqtfdmjwhyxs");
+   client.subscribe(function(error, data) {
+   if (error) {
+       console.error(error);
+   } else {
+       console.log(data);
+       console.log(data.status);
+       var x = document.getElementById("errormessage");
+       if(data.status  != "resolved"){
+           x.style.display = "block";
+           x.innerHTML = '<i class="fa fa-exclamation fa-2x" aria-hidden="true"></i>&nbsp; &nbsp;' + data.body
+       } else {
+           x.style.display = "none";
+           x.html = ''
+       }
+   }
+   });
+</script>
+
+<!-- End of status page code -->
 
 <header class="header">
   <div id="skipNav"><a class="show-on-focus" href="#main-content">Skip to Main Content</a></div>
