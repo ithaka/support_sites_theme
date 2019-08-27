@@ -630,6 +630,20 @@ table td, table th {
   color: $link_color;
 }
 
+/* Alert banner for support site */
+#errormessage {
+  align-items: center;
+  background-color: #ffefc2;
+  padding: 32px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(51, 51, 51, 0.25);
+  border-radius: 3px;
+}
+
+#errormessage .fa-exclamation {
+  color: #dc2a2a;
+}
+
 /*this hides Activities from menu when a user is logged in. See JS for code that shows My Activities to internal users and users within ITHAKA org */
 .my-activities, #user-menu .my-activities {
   display: none;
@@ -1500,12 +1514,12 @@ table td, table th {
 
 /***** Article *****/
 .article {
-  /*
-  * The article grid is defined this way to optimize readability:
-  * Sidebar | Content | Free space
-  * 17%     | 66%     | 17%
-
-  Testing out 75% (content/article) | 25% (sidebar) -- we can always revert back
+  /*
+  * The article grid is defined this way to optimize readability:
+  * Sidebar | Content | Free space
+  * 17%     | 66%     | 17%
+
+  Testing out 75% (content/article) | 25% (sidebar) -- we can always revert back
   */
   flex: 1 0 auto;
 }
@@ -2637,10 +2651,10 @@ table td, table th {
 }
 
 /***** Post *****/
-/*
-* The post grid is defined this way:
-* Content | Sidebar
-* 70%     | 30%
+/*
+* The post grid is defined this way:
+* Content | Sidebar
+* 70%     | 30%
 */
 .post {
   flex: 1;
