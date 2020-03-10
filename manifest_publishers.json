@@ -252,7 +252,7 @@
       "type": "text",
       "description": "marketing_page_text",
       "label": "marketing_page_text_label",
-      "value": "JSTOR Publishers"
+      "value": "JSTOR"
     },{
       "identifier": "statuspage_component",
       "type": "text",
@@ -264,13 +264,13 @@
       "type": "text",
       "description": "product_name_text",
       "label": "product_name_text_label",
-      "value": "JSTOR Publishers"
+      "value": "JSTOR"
     },{
       "identifier": "support_name_text",
       "type": "text",
       "description": "support_name_text",
       "label": "support_name_text_label",
-      "value": "JSTOR Support"
+      "value": "JSTOR Publishers Support"
     },{
       "identifier": "contact_us_page",
       "type": "text",
@@ -288,7 +288,7 @@
       "type": "text",
       "description": "login_product_name",
       "label": "login_product_name",
-      "value": "JSTOR Publishers"
+      "value": "JSTOR"
     }]
   }]
 }
