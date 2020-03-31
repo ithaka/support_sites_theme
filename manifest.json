@@ -1,5 +1,5 @@
 {
-  "name": "JSTOR Support Theme based on Zendesk Copenhagen",
+  "name": "JSTOR Publishers Support Theme based on Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
   "version": "2.0.3",
   "api_version": 1,
@@ -270,7 +270,7 @@
       "type": "text",
       "description": "support_name_text",
       "label": "support_name_text_label",
-      "value": "JSTOR Support"
+      "value": "JSTOR Publishers Support"
     },{
       "identifier": "contact_us_page",
       "type": "text",
