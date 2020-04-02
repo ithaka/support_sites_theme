@@ -11,12 +11,6 @@ body {
   font-weight: $font-weight-base;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-
-  > main {
-    @include desktop {
-      min-height: 65vh;
-    }
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
