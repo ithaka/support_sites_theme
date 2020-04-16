@@ -18,16 +18,39 @@
 }
 
 .form-field input {
-  border: 1px solid $border-color;
+  border: 1px solid $dark-gray;
   border-radius: 4px;
   padding: 10px;
   width: 100%;
 
-  &:focus { border: 1px solid $brand_color; }
+  &:focus {	outline: none;
+    border: 1px solid #1291AE;
+    background-color: #fff;
+    box-shadow: inset 0 0 4px #1291AE;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
+}
+
+#request_collaborators_ {
+  box-shadow: none;
+  transition: none;
+}
+
+.form-field ul{
+  border: 1px solid $dark-gray;
+  border-radius: 4px;
+
+  &:focus-within {
+    outline: none;
+    border: 1px solid $visited-link-color;
+    background-color: $background_color;
+    box-shadow: inset 0 0 4px $visited-link-color;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
 }
 
 .form-field input[type="text"] {
-  border: 1px solid $border-color;
+  border: 1px solid $dark-gray;
   border-radius: 4px;
 
   &:focus { border: 1px solid $brand_color; }
@@ -37,8 +60,14 @@
   width: auto;
 }
 
+.form-field a, a:hover {
+  text-decoration: none;
+  color: $dark-gray;
+}
+
 // Select box
 .form-field .nesty-input {
+  border: 1px solid $dark-gray;
   border-radius: 4px;
   height: 40px;
   line-height: 40px;
@@ -46,7 +75,7 @@
   vertical-align: middle;
 
   &:focus {
-    border: 1px solid $brand_color;
+    border: 1px solid $dark-gray;
     text-decoration: none;
   }
 }
