@@ -2003,10 +2003,10 @@ table td, table th {
   color: lighten($text_color, 20%);
 }
 
-.upload-dropzone [data-hc-focus="true"] {
+.upload-dropzone[data-hc-focus="true"] {
   outline: none;
-  border: 2px solid #1291AE;
-  background-color: #fff;
+  border: 2px solid #1291ae;
+  background-color: $background_color;
   transition: .5s,border-color .25s ease-in-out;
 }
 
