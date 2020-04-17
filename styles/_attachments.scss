@@ -30,6 +30,18 @@
   }
 }
 
-.upload-dropzone span {
-  color: $secondary-text-color;
+.upload-dropzone {
+  border: 1px solid $dark-gray;
+  border-radius: 4px;
+
+  span {
+    color: $secondary-text-color;
+  }
+
+   [data-hc-focus="true"] {
+      outline: none;
+      border: 2px solid #1291AE;
+      background-color: #fff;
+      transition: .5s,border-color .25s ease-in-out;
+  }
 }
