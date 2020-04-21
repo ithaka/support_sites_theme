@@ -1,7 +1,7 @@
 {
   "name": "JSTOR Publishers Support Theme based on Zendesk",
   "author": "Zendesk, ITHAKA",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{

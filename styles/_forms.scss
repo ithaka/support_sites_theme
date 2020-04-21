@@ -4,7 +4,40 @@
 }
 
 .form {
-  max-width: 650px;
+  @include desktop {
+    flex: 1 0 75%;
+    max-width: 75%;
+    min-width: 640px;
+    padding: 0 60px 0 0;
+  }
+
+  flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
+
+  &-container {
+    @include desktop {
+      flex-direction: row;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-sidebar {
+    @include desktop {
+      border: 0;
+      flex: 0 0 25%;
+      height: auto;
+      padding: 0 0 0 60px;
+    }
+
+    @media (max-width: #{$desktop-width}){
+      margin-top: 30px;
+    }
+
+    flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
+    margin: 0 0 0;
+    padding: 0;
+  }
 }
 
 .form-field ~ .form-field {

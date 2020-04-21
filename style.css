@@ -384,7 +384,48 @@ table td, table th {
 }
 
 .form {
-  max-width: 650px;
+  flex: 1 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    flex: 1 0 75%;
+    max-width: 75%;
+    min-width: 640px;
+    padding: 0 60px 0 0;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    flex-direction: row;
+  }
+}
+
+.form-sidebar {
+  flex: 1 0 auto;
+  margin: 0 0 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .form-sidebar {
+    border: 0;
+    flex: 0 0 25%;
+    height: auto;
+    padding: 0 0 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form-sidebar {
+    margin-top: 30px;
+  }
 }
 
 .form-field ~ .form-field {
