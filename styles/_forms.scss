@@ -1,7 +1,43 @@
 /***** Forms *****/
+.contactusheader{
+  color: #900;
+}
 
 .form {
-  max-width: 650px;
+  @include desktop {
+    flex: 1 0 75%;
+    max-width: 75%;
+    min-width: 640px;
+    padding: 0 60px 0 0;
+  }
+
+  flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
+
+  &-container {
+    @include desktop {
+      flex-direction: row;
+    }
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-sidebar {
+    @include desktop {
+      border: 0;
+      flex: 0 0 25%;
+      height: auto;
+      padding: 0 0 0 60px;
+    }
+
+    @media (max-width: #{$desktop-width}){
+      margin-top: 30px;
+    }
+
+    flex: 1 0 auto; //Explicit values needed whith flex-direction: column for IE11
+    margin: 0 0 0;
+    padding: 0;
+  }
 }
 
 .form-field ~ .form-field {
@@ -15,16 +51,44 @@
 }
 
 .form-field input {
-  border: 1px solid $border-color;
+  border: 1px solid $dark-gray;
   border-radius: 4px;
   padding: 10px;
   width: 100%;
 
-  &:focus { border: 1px solid $brand_color; }
+  &:focus {
+    outline: none;
+    border: 1px solid $visited-link-color;
+    background-color: $background_color;
+    box-shadow: inset 0 0 4px $visited-link-color;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
 }
 
+#request_collaborators_ {
+  box-shadow: none;
+  transition: none;
+}
+
+.form-field ul{
+  border: 1px solid $dark-gray;
+  border-radius: 4px;
+
+  &:focus-within {
+    outline: none;
+    border: 1px solid $visited-link-color;
+    background-color: $background_color;
+    box-shadow: inset 0 0 4px $visited-link-color;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
+}
+
+  .form-field .upload-pool {
+    border: none;
+  }
+
 .form-field input[type="text"] {
-  border: 1px solid $border-color;
+  border: 1px solid $dark-gray;
   border-radius: 4px;
 
   &:focus { border: 1px solid $brand_color; }
@@ -34,8 +98,14 @@
   width: auto;
 }
 
+.form-field a, a:hover {
+  text-decoration: none;
+  color: $dark-gray;
+}
+
 // Select box
 .form-field .nesty-input {
+  border: 1px solid $dark-gray;
   border-radius: 4px;
   height: 40px;
   line-height: 40px;
@@ -43,8 +113,11 @@
   vertical-align: middle;
 
   &:focus {
-    border: 1px solid $brand_color;
-    text-decoration: none;
+    outline: none;
+    border: 1px solid $visited-link-color;
+    background-color: $background_color;
+    box-shadow: inset 0 0 4px $visited-link-color;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
   }
 }
 
@@ -56,6 +129,14 @@
 
 .form-field textarea {
   vertical-align: middle;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $visited-link-color;
+    background-color: $background_color;
+    box-shadow: inset 0 0 4px $visited-link-color;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+  }
 }
 
 .form-field input[type="checkbox"] + label {

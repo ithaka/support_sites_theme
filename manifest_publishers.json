@@ -1,7 +1,7 @@
 {
   "name": "JSTOR Publishers Support Theme based on Zendesk",
   "author": "Zendesk, ITHAKA",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
@@ -276,7 +276,7 @@
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://www.jstor.org/contact-us/"
+      "value": "https://publishersupport.zendesk.com//hc/en-us/requests/new?ticket_form_id=360003403994"
     },{
       "identifier": "login_link",
       "type": "text",
