@@ -49,26 +49,39 @@
 
 .footer ul.social-icons li { display: inline-block; margin-bottom: 0; }
 
-.footer .icon-link i {
-	width: 28px;
-  height: 28px;
-  display: inline-block;
-  background-size: cover;
-  border-radius: 3px;
-}
+.footer .icon-link {
+        position: relative;
+        svg {
+            fill: #004152;
+            height: 24px;
+            width: 24px;
+            transition: all 0.3s ease-in-out;
+        }
+        svg:hover {
+            fill: $visited-link-color;
+        }
+    }
 
-.footer .icon-link i.fi-social-twitter {
-   background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/Twitter-icon.png');
-}
-
-.footer .icon-link i.fi-social-facebook {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  margin-bottom: 3px;
-   background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/facebook-icon.png');
-
-}
+// .footer .icon-link i {
+// 	width: 28px;
+//   height: 28px;
+//   display: inline-block;
+//   background-size: cover;
+//   border-radius: 3px;
+// }
+//
+// .footer .icon-link i.fi-social-twitter {
+//    background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/Twitter-icon.png');
+// }
+//
+// .footer .icon-link i.fi-social-facebook {
+//   width: 24px;
+//   height: 24px;
+//   margin-left: 10px;
+//   margin-bottom: 3px;
+//    background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/facebook-icon.png');
+//
+// }
 
 .footer-inner {
   max-width: 1160px;
