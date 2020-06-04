@@ -131,6 +131,11 @@
       }
   }
 
+.footer ul.list-horizontal li {
+    display: inline-block;
+    margin-right: 1.2rem;
+  }
+
   .footer .icon-link {
           position: relative;
           svg {

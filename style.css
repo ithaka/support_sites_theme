@@ -885,6 +885,11 @@ table td, table th {
   margin-bottom: 0;
 }
 
+.footer ul.list-horizontal li {
+  display: inline-block;
+  margin-right: 1.2rem;
+}
+
 .footer .icon-link {
   position: relative;
 }
@@ -948,11 +953,6 @@ table td, table th {
     padding: 0;
     width: 90%;
   }
-}
-
-.footer ul.list-horizontal li {
-  display: inline-block;
-  margin-right: 1.0rem;
 }
 
 .footer-language-selector {
