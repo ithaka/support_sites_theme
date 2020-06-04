@@ -950,6 +950,11 @@ table td, table th {
   }
 }
 
+.footer ul.list-horizontal li {
+  display: inline-block;
+  margin-right: 1.0rem;
+}
+
 .footer-language-selector {
   color: #006179;
   display: inline-block;
