@@ -101,7 +101,7 @@
 
   .bottom-section {
     margin: 5px auto 35px;
-      
+
       .top-spacing {
         @include desktop {
           margin-top: 45px;
@@ -131,6 +131,24 @@
       }
   }
 
+.footer ul.list-horizontal li {
+    display: inline-block;
+    margin-right: 1.2rem;
+  }
+
+  .footer .icon-link {
+          position: relative;
+          svg {
+              fill: #004152;
+              height: 24px;
+              width: 24px;
+              transition: all 0.3s ease-in-out;
+          }
+          svg:hover {
+              fill: $visited-link-color;
+          }
+      }
+
   /* Google Translate styles */
 
   .goog-te-gadget-simple {
@@ -155,11 +173,11 @@
     a.goog-te-menu-value {
       color: inherit;
     }
-    
+
     a.goog-te-menu-value:hover {
       border: 0;
     }
-    
+
     a.goog-te-menu-value span:not(:first-child) {
       display: none;
     }
