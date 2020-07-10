@@ -55,6 +55,7 @@
 }
 
 .footer .icon-link {
+        display: block;
         position: relative;
         svg {
             fill: #004152;
@@ -66,27 +67,6 @@
             fill: $visited-link-color;
         }
     }
-
-// .footer .icon-link i {
-// 	width: 28px;
-//   height: 28px;
-//   display: inline-block;
-//   background-size: cover;
-//   border-radius: 3px;
-// }
-//
-// .footer .icon-link i.fi-social-twitter {
-//    background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/Twitter-icon.png');
-// }
-//
-// .footer .icon-link i.fi-social-facebook {
-//   width: 24px;
-//   height: 24px;
-//   margin-left: 10px;
-//   margin-bottom: 3px;
-//    background-image: url('//p6.zdassets.com/hc/theme_assets/1006386/200489087/facebook-icon.png');
-//
-// }
 
 .footer-inner {
   max-width: 1160px;
