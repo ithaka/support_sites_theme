@@ -61,7 +61,7 @@
             fill: #004152;
             height: 24px;
             width: 24px;
-            transition: all 0.3s ease-in-out;
+            transition: fill 0.3s ease-in-out;
         }
         svg:hover {
             fill: $visited-link-color;
