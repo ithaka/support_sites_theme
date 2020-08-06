@@ -51,6 +51,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="user-nav" id="user-nav">
       <a href="{{settings.marketing_page}}">About {{settings.marketing_page_name}}</a>
       <a class="current" href="/hc/en/">Support</a>
+      {{#is settings.product_name_text 'JSTOR'}}
+      <a href="https://support.publishers.jstor.org/hc/en-us">Publishers</a>
+      {{/is}}
       <a href="{{settings.contact_us_page}}">Contact Us</a>
       <a class="button" href="{{settings.login_link}}">Log in to {{settings.login_product_name}}</a>
       <!--{{link 'new_request' class='submit-a-request'}}-->
