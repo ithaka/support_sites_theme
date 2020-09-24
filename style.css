@@ -226,6 +226,10 @@ ul.list-horizontal li {
   padding-left: 6px;
 }
 
+.header-jstor #skipNav {
+  left: 70px;
+}
+
 .dropdown-menu [role="menuitem"] {
   text-decoration: none;
   border-left: 4px solid #ffffff;
@@ -488,7 +492,7 @@ table td, table th {
   width: auto;
 }
 
-.form-field a, a:hover {
+.form-field a, .form-field a:hover {
   text-decoration: none;
   color: #333333;
 }
@@ -869,6 +873,7 @@ table td, table th {
 
 .footer a.button:hover {
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .footer a.button {
@@ -1220,7 +1225,7 @@ table td, table th {
 
 @media (min-width: 768px) {
   .sub-nav input[type="search"] {
-    min-width: 230px;
+    min-width: 300px;
   }
 }
 
