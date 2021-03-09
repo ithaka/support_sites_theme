@@ -1,5 +1,5 @@
 {
-  "name": "JSTOR Publisher Support Theme based on Zendesk",
+  "name": "JSTOR Support Theme based on Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
   "version": "2.1.2",
   "api_version": 1,
@@ -240,7 +240,7 @@
       "type": "text",
       "description": "google_tag_id_text",
       "label": "google_tag_id_text_label",
-      "value": "GTM-T6S6MHB"
+      "value": "GTM-NM4N39Z"
     },{
       "identifier": "marketing_page",
       "type": "text",
@@ -270,13 +270,13 @@
       "type": "text",
       "description": "support_name_text",
       "label": "support_name_text_label",
-      "value": "JSTOR Publisher Support"
+      "value": "JSTOR Support"
     },{
       "identifier": "contact_us_page",
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://publishersupport.zendesk.com//hc/en-us/requests/new?ticket_form_id=360003403994"
+      "value": "https://www.jstor.org/contact-us/"
     },{
       "identifier": "login_link",
       "type": "text",
