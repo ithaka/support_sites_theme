@@ -1,7 +1,7 @@
 {
   "name": "JSTOR Support Theme based on Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
-  "version": "3.0.0",
+  "version": "",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
@@ -11,7 +11,7 @@
       "type": "color",
       "description": "brand_color_description",
       "label": "brand_color_label",
-      "value": "var(--pharos-color-interactive-primary)"
+      "value": "$brand_color"
     }, {
       "identifier": "brand_text_color",
       "type": "color",
@@ -29,7 +29,7 @@
       "type": "color",
       "description": "link_color_description",
       "label": "link_color_label",
-      "value": "var(--pharos-color-interactive-secondary)"
+      "value": "$link_color"
     }, {
       "identifier": "background_color",
       "type": "color",
