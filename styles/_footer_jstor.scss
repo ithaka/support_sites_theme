@@ -1,6 +1,6 @@
 /***** JSTOR Footer *****/
 .footer {
-  background-color: #E8E8E8;
+  background-color: $footer_background_color;
   margin-top: 60px;
   padding: 30px 0 60px;
 }
@@ -17,7 +17,7 @@
     position: absolute;
     top: 2%;
     left: -3%;
-    background: #cccccc;
+    background: $footer_background_color;
 }
 
 .footer li {
@@ -26,24 +26,25 @@
 }
 
 .footer a {
-  color: #006179;
-  text-decoration: underline;
+  color: $footer_text_color;
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: #1291AE;
+  color: $footer_text_color;
+  text-decoration: underline;
 }
 
 .footer a.button:hover {
  text-decoration: none;
- color: #FFFFFF;
+ color: $footer_secondary_text_color;
 }
 
 .footer a.button {
  min-width: 120px;
  text-decoration: none;
  color: $brand_text_color;
- border-color: $brand_text_color;
+ border-color: $background_color;
 }
 
 .footer .show-for-sr {

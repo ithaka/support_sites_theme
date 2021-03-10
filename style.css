@@ -837,7 +837,7 @@ table td, table th {
 
 /***** JSTOR Footer *****/
 .footer {
-  background-color: #E8E8E8;
+  background-color: var(--pharos-color-text-10);
   margin-top: 60px;
   padding: 30px 0 60px;
 }
@@ -854,7 +854,7 @@ table td, table th {
   position: absolute;
   top: 2%;
   left: -3%;
-  background: #cccccc;
+  background: var(--pharos-color-text-10);
 }
 
 .footer li {
@@ -863,24 +863,25 @@ table td, table th {
 }
 
 .footer a {
-  color: #006179;
-  text-decoration: underline;
+  color: var(--pharos-color-interactive-tertiary);
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: #1291AE;
+  color: var(--pharos-color-interactive-tertiary);
+  text-decoration: underline;
 }
 
 .footer a.button:hover {
   text-decoration: none;
-  color: #FFFFFF;
+  color: var(--pharos-color-text-10);
 }
 
 .footer a.button {
   min-width: 120px;
   text-decoration: none;
   color: $brand_text_color;
-  border-color: $brand_text_color;
+  border-color: $background_color;
 }
 
 .footer .show-for-sr {
