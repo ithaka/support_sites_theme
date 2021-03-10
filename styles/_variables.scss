@@ -2,12 +2,12 @@
 
 // Colors
 $brand_color: var(--pharos-color-interactive-primary) !default;
-$brand_text_color: #fff !default; //Color for text with an accent color background
-$text_color: #000 !default;
+$brand_text_color: var(--pharos-color-interactive-tertiary) !default; //Color for text with an accent color background
+$text_color: var(--pharos-color-interactive-secondary) !default;
 $link_color: var(--pharos-color-interactive-secondary) !default;
-$secondary_link_color: #555555;
-$secondary_link_hover: #333333;
-$background_color: #fff !default;
+$secondary_link_color:var(--pharos-color-interactive-secondary);
+$secondary_link_hover:var(--pharos-color-hover-primary);
+$background_color: var(--pharos-color-ui-10) !default;
 
 $visited-link-color: #1291ae; //$bonsai-blue
 $hover-button-color: $visited-link-color;

@@ -1056,12 +1056,12 @@ table td, table th {
 }
 
 .breadcrumbs li a {
-  color: #555555;
+  color: var(--pharos-color-interactive-secondary);
   text-decoration: none;
 }
 
 .breadcrumbs li a:hover {
-  color: #333333;
+  color: var(--pharos-color-hover-primary);
   text-decoration: underline;
 }
 
@@ -1314,7 +1314,7 @@ table td, table th {
   font-size: 14px;
   font-weight: 300;
   margin: 0;
-  color: #555555;
+  color: var(--pharos-color-interactive-secondary);
 }
 
 .blocks-item-description:hover {
@@ -1894,7 +1894,7 @@ table td, table th {
 .article-vote {
   background: transparent;
   border: 1px solid #989898;
-  color: #555555;
+  color: var(--pharos-color-interactive-secondary);
   margin: 10px 5px;
   min-width: 90px;
   width: auto;
@@ -2006,7 +2006,7 @@ table td, table th {
 
 .recent-articles li a,
 .related-articles li a {
-  color: #555555;
+  color: var(--pharos-color-interactive-secondary);
 }
 
 .recent-articles li a:hover,
