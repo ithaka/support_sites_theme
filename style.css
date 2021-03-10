@@ -879,6 +879,8 @@ table td, table th {
 .footer a.button {
   min-width: 120px;
   text-decoration: none;
+  color: $brand_text_color;
+  border-color: $brand_text_color;
 }
 
 .footer .show-for-sr {
