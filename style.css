@@ -1254,7 +1254,7 @@ table td, table th {
 
 .blocks-item {
   box-sizing: border-box;
-  color: $brand_color;
+  color: $text_color;
   display: flex;
   flex: 1 0 340px;
   flex-direction: column;
@@ -1273,8 +1273,8 @@ table td, table th {
 }
 
 .blocks-item:hover h2, .blocks-item:focus h2, .blocks-item:active h2 {
-  color: $brand_color;
-  text-decoration: underline;
+  color: $text_color;
+  text-decoration: none;
 }
 
 .blocks-item-internal {
@@ -1294,7 +1294,7 @@ table td, table th {
 }
 
 .blocks-item-link {
-  color: $brand_color;
+  color: $link_color;
   padding: 10px 0;
   text-decoration: none;
 }
