@@ -33,7 +33,7 @@
       text-decoration: none;
 
       h2 {
-      color: $text_color;
+      color: $secondary_link_hover;
       text-decoration: none;
       }
 
@@ -61,7 +61,7 @@
 
     color: $link_color;
     padding: 10px 0;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover,
     &:focus,

@@ -842,6 +842,12 @@ table td, table th {
   padding: 30px 0 60px;
 }
 
+.footer h1 {
+  color: var(--pharos-color-interactive-tertiary);
+  font-family: var(--pharos-font-family-sans-serif);
+  font-weight: bold;
+}
+
 .footer h4 {
   font-family: "Arial Black", "Arial", Helvetica, sans-serif;
   font-weight: bold;
@@ -1273,7 +1279,7 @@ table td, table th {
 }
 
 .blocks-item:hover h2, .blocks-item:focus h2, .blocks-item:active h2 {
-  color: $text_color;
+  color: var(--pharos-color-hover-primary);
   text-decoration: none;
 }
 
@@ -1296,7 +1302,7 @@ table td, table th {
 .blocks-item-link {
   color: $link_color;
   padding: 10px 0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 @media (min-width: 1024px) {
