@@ -8,15 +8,15 @@ body {
   background-color: $background_color;
   color: $text_color;
   font-family: $text_font;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--pharos-font-size-base);
+  font-weight: var(--pharos-font-weight-regular);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading_font;
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
   margin-top: 0;
 }
 
@@ -55,7 +55,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 input,
@@ -278,8 +278,8 @@ ul.list-horizontal li {
 }
 
 .button[aria-selected="true"]:hover, .button[aria-selected="true"]:focus, .button[aria-selected="true"]:active, [role="button"][aria-selected="true"]:hover, [role="button"][aria-selected="true"]:focus, [role="button"][aria-selected="true"]:active {
-  background-color: #1291ae;
-  border-color: #1291ae;
+  background-color: var(--pharos-color-hover-primary);
+  border-color: var(--pharos-color-hover-primary);
 }
 
 .button[data-disabled], [role="button"][data-disabled] {
@@ -292,7 +292,7 @@ ul.list-horizontal li {
   border-radius: 4px;
   color: $brand_text_color;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--pharos-font-weight-regular);
   line-height: 2.72;
   min-width: 190px;
   padding: 0 1.9286em;
@@ -306,7 +306,7 @@ ul.list-horizontal li {
 }
 
 .button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
-  background-color: #1291ae;
+  background-color: var(--pharos-color-hover-primary);
 }
 
 .button-large[disabled], input[type="submit"][disabled] {
@@ -340,13 +340,13 @@ table {
 
 table caption {
   text-align: left;
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
   padding-bottom: 8px;
 }
 
 table th {
   color: $text_color;
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
   text-align: left;
 }
 
@@ -379,7 +379,7 @@ table td, table th {
   border: 1px solid #cccccc;
   vertical-align: top;
   text-align: left;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 /***** Forms *****/
@@ -438,7 +438,7 @@ table td, table th {
 
 .form-field label {
   display: block;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin-bottom: 5px;
 }
 
@@ -451,9 +451,9 @@ table td, table th {
 
 .form-field input:focus {
   outline: none;
-  border: 1px solid #1291ae;
+  border: 1px solid var(--pharos-color-hover-primary);
   background-color: $background_color;
-  box-shadow: inset 0 0 4px #1291ae;
+  box-shadow: inset 0 0 4px var(--pharos-color-hover-primary);
   transition: box-shadow .5s,border-color .25s ease-in-out;
 }
 
@@ -469,9 +469,9 @@ table td, table th {
 
 .form-field ul:focus-within {
   outline: none;
-  border: 1px solid #1291ae;
+  border: 1px solid var(--pharos-color-hover-primary);
   background-color: $background_color;
-  box-shadow: inset 0 0 4px #1291ae;
+  box-shadow: inset 0 0 4px var(--pharos-color-hover-primary);
   transition: box-shadow .5s,border-color .25s ease-in-out;
 }
 
@@ -508,9 +508,9 @@ table td, table th {
 
 .form-field .nesty-input:focus {
   outline: none;
-  border: 1px solid #1291ae;
+  border: 1px solid var(--pharos-color-hover-primary);
   background-color: $background_color;
-  box-shadow: inset 0 0 4px #1291ae;
+  box-shadow: inset 0 0 4px var(--pharos-color-hover-primary);
   transition: box-shadow .5s,border-color .25s ease-in-out;
 }
 
@@ -526,9 +526,9 @@ table td, table th {
 
 .form-field textarea:focus {
   outline: none;
-  border: 1px solid #1291ae;
+  border: 1px solid var(--pharos-color-hover-primary);
   background-color: $background_color;
-  box-shadow: inset 0 0 4px #1291ae;
+  box-shadow: inset 0 0 4px var(--pharos-color-hover-primary);
   transition: box-shadow .5s,border-color .25s ease-in-out;
 }
 
@@ -571,7 +571,7 @@ table td, table th {
 }
 
 .form .suggestion-list {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin-top: 30px;
 }
 
@@ -586,7 +586,7 @@ table td, table th {
 }
 
 .form .suggestion-list li a:visited {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 /***** Header *****/
@@ -661,7 +661,7 @@ table td, table th {
   color: $text_color;
   display: none;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
   margin: 20px 20px 0 0;
   padding: 2px 0;
   text-decoration: none;
@@ -845,11 +845,12 @@ table td, table th {
 .footer h1 {
   color: var(--pharos-color-interactive-tertiary);
   font-family: var(--pharos-font-family-sans-serif);
-  font-weight: bold;
+  font-weight: var(--pharos-font-weight-bold);
+  font-size: 32px;
 }
 
 .footer h4 {
-  font-family: "Arial Black", "Arial", Helvetica, sans-serif;
+  font-family: var(--pharos-font-family-sans-serif);
   font-weight: bold;
 }
 
@@ -864,7 +865,7 @@ table td, table th {
 }
 
 .footer li {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin-bottom: 11px;
 }
 
@@ -917,7 +918,7 @@ table td, table th {
 }
 
 .footer .icon-link svg:hover {
-  fill: #1291ae;
+  fill: var(--pharos-color-hover-primary);
 }
 
 .footer-inner {
@@ -928,19 +929,19 @@ table td, table th {
 }
 
 .footer p > small {
-  font-size: 12px !important;
+  font-size: var(--pharos-font-size-micro) !important;
 }
 
 .footer .goog-te-gadget-simple {
   border: 1px solid rgba(0, 106, 132, 0.5);
   color: #006a84;
-  font-weight: 400;
+  font-weight: var(--pharos-font-weight-regular);
   cursor: pointer;
   box-shadow: 0 2px 2px 0 #D6D6D6;
   height: 39px;
   padding: 8px;
   margin: 0 0 16px;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-family: inherit;
   line-height: normal;
   border-radius: 3px;
@@ -1053,7 +1054,7 @@ table td, table th {
   color: lighten($text_color, 20%);
   display: inline;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   max-width: 450px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1239,7 +1240,7 @@ table td, table th {
 }
 
 .sub-nav input[type="search"]::after {
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
 }
 
 /***** Blocks *****/
@@ -1320,10 +1321,11 @@ table td, table th {
 }
 
 .blocks-item-description {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-weight: 300;
   margin: 0;
   color: var(--pharos-color-interactive-secondary);
+  text-decoration: none;
 }
 
 .blocks-item-description:hover {
@@ -1364,7 +1366,7 @@ table td, table th {
 
 /***** Promoted articles *****/
 .popular-topics {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   position: relative;
   top: 25px;
 }
@@ -1464,7 +1466,7 @@ table td, table th {
 .recent-activity-item-time, .recent-activity-item-comment {
   color: lighten($text_color, 20%);
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-weight: 300;
 }
 
@@ -1484,7 +1486,7 @@ table td, table th {
   color: $brand_color;
   content: "\1F4AC";
   display: inline-block;
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   padding-right: 3px;
   vertical-align: middle;
 }
@@ -1551,7 +1553,7 @@ table td, table th {
 }
 
 .article-list-item {
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   padding: 5px 0;
 }
 
@@ -1603,7 +1605,7 @@ table td, table th {
 }
 
 .section-list-item .page-header-description {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 .see-all-sections-trigger {
@@ -1744,7 +1746,7 @@ table td, table th {
 }
 
 .article-body a:visited {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 .article-body code {
@@ -1800,7 +1802,7 @@ table td, table th {
 
 .article-anchorbox p {
   margin: 0 0 10px;
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
 }
 
 .article-anchorbox ul {
@@ -1862,7 +1864,7 @@ table td, table th {
 }
 
 .article-sidebar h3.sidenav-title {
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   margin-bottom: 10px;
 }
 
@@ -1987,12 +1989,12 @@ table td, table th {
 }
 
 .article-unsubscribe:hover {
-  background-color: #1291ae;
-  border-color: #1291ae;
+  background-color: var(--pharos-color-hover-primary);
+  border-color: var(--pharos-color-hover-primary);
 }
 
 .sidenav-item {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   display: block;
   margin-bottom: 10px;
 }
@@ -2003,14 +2005,14 @@ table td, table th {
 
 .recent-articles h3,
 .related-articles h3 {
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   margin: 0 0 10px;
 }
 
 .recent-articles li,
 .related-articles li {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 .recent-articles li a,
@@ -2038,7 +2040,7 @@ table td, table th {
 .attachments .attachment-item::before {
   color: $text_color;
   content: "\1F4CE";
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   left: 0;
   position: absolute;
   top: 5px;
@@ -2065,7 +2067,7 @@ table td, table th {
 
 .upload-dropzone[data-hc-focus="true"] {
   outline: none;
-  border: 2px solid #1291ae;
+  border: 2px solid var(--pharos-color-hover-primary);
   background-color: $background_color;
   transition: .5s,border-color .25s ease-in-out;
 }
@@ -2147,7 +2149,7 @@ table td, table th {
   color: lighten($text_color, 20%);
   display: inline-block;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin-bottom: 0;
 }
 
@@ -2163,7 +2165,7 @@ table td, table th {
 .comment-sorter .dropdown-toggle {
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 [dir="rtl"] .comment-sorter {
@@ -2341,7 +2343,7 @@ table td, table th {
 }
 
 .comment-body a:visited {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 .comment-body code {
@@ -2420,7 +2422,7 @@ table td, table th {
 }
 
 .vote-voted:hover::before {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 /***** Actions *****/
@@ -2446,7 +2448,7 @@ table td, table th {
   color: lighten($text_color, 20%);
   content: "\2699";
   display: block;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin: auto;
   padding: 5px;
 }
@@ -2499,7 +2501,7 @@ table td, table th {
 /* Community topic page */
 .topic-header {
   border-bottom: 1px solid #000;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 @media (min-width: 768px) {
@@ -2578,8 +2580,8 @@ table td, table th {
 }
 
 .community-follow [role="button"][aria-selected="true"]:hover {
-  background-color: #1291ae;
-  border-color: #1291ae;
+  background-color: var(--pharos-color-hover-primary);
+  border-color: var(--pharos-color-hover-primary);
 }
 
 .community-follow [role="button"]::after {
@@ -2644,7 +2646,7 @@ table td, table th {
 }
 
 .striped-list-title:visited {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 .striped-list .meta-group {
@@ -2654,7 +2656,7 @@ table td, table th {
 .striped-list-count {
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   justify-content: flex-start;
   text-transform: capitalize;
 }
@@ -2692,7 +2694,7 @@ table td, table th {
   .striped-list-number {
     color: $text_color;
     display: block;
-    font-weight: 400;
+    font-weight: var(--pharos-font-weight-regular);
   }
 }
 
@@ -2909,7 +2911,7 @@ table td, table th {
 }
 
 .post-body a:visited {
-  color: #1291ae;
+  color: var(--pharos-color-hover-primary);
 }
 
 .post-body code {
@@ -3287,7 +3289,7 @@ table td, table th {
 }
 
 .requests-table-toolbar .request-filter-label {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin-top: 30px;
 }
 
@@ -3414,7 +3416,7 @@ table td, table th {
 }
 
 .subscriptions-unsubscribe a:hover {
-  background-color: #1291ae;
+  background-color: var(--pharos-color-hover-primary);
   text-decoration: none;
 }
 
@@ -3445,7 +3447,7 @@ table td, table th {
 /* Contributions table */
 .contributions-table td:last-child {
   color: lighten($text_color, 20%);
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-weight: 300;
 }
 
@@ -3590,7 +3592,7 @@ table td, table th {
   .request-sidebar {
     background-color: darken($background_color, 3%);
     border: 0;
-    font-size: 14px;
+    font-size: var(--pharos-font-size-small);
     flex: 0 0 auto;
     padding: 0 20px;
     width: 30%;
@@ -3598,7 +3600,7 @@ table td, table th {
 }
 
 .request-sidebar h5 {
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   font-weight: 600;
   position: relative;
 }
@@ -3623,7 +3625,7 @@ table td, table th {
 .request-details dt, .request-details dd {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   margin: 20px 0 0 0;
 }
 
@@ -3710,8 +3712,8 @@ table td, table th {
 }
 
 .pagination a, .pagination span {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: var(--pharos-font-size-base);
+  font-weight: var(--pharos-font-weight-bold);
   color: $link_color;
   padding-top: 9px;
   text-decoration: none;
@@ -3719,8 +3721,8 @@ table td, table th {
 
 @media (min-width: 768px) {
   .pagination a, .pagination span {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--pharos-font-size-small);
+    font-weight: var(--pharos-font-weight-bold);
     padding-top: 9px;
   }
 }
@@ -3776,7 +3778,7 @@ table td, table th {
 
 .meta-data {
   color: lighten($text_color, 20%);
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-weight: 300;
 }
 
@@ -4026,7 +4028,7 @@ table td, table th {
 }
 
 .profile-stats {
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -4205,7 +4207,7 @@ table td, table th {
   padding: 10px 0;
   color: lighten($text_color, 20%);
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4221,7 +4223,7 @@ table td, table th {
 .profile-section-sorter {
   flex-basis: 100%;
   border-top: solid 1px #eee;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 .profile-section-sorter .dropdown-toggle {
@@ -4549,18 +4551,18 @@ table td, table th {
 
 .search-result-description {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: var(--pharos-font-size-base);
   word-break: break-word;
 }
 
 .search-result-description em {
-  font-weight: 700;
+  font-weight: var(--pharos-font-weight-bold);
 }
 
 .search-result-votes, .search-result-meta-count {
   color: lighten($text_color, 20%);
   display: inline-block;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
   font-weight: 300;
   padding: 4px 5px;
   position: relative;

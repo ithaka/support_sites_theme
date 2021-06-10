@@ -8,11 +8,12 @@
 .footer h1 {
   color: $footer_text_color;
   font-family: $footer_font;
-	font-weight: bold;
+	font-weight: $font-weight-bold;
+  font-size: 32px;
 }
 
 .footer h4 {
-  font-family: "Arial Black", "Arial", Helvetica, sans-serif;
+  font-family: $footer_font;
 	font-weight: bold;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .footer li {
-  font-size: 14px;
+  font-size: $font-size-small;
   margin-bottom: 11px;
 }
 
@@ -86,19 +87,19 @@
 }
 
 .footer p > small {
-  font-size: 12px!important;
+  font-size: $font-size-micro !important;
 }
 
 .footer .goog-te-gadget-simple {
   border: 1px solid rgba(0, 106, 132, 0.5);
   color: #006a84;
-  font-weight: 400;
+  font-weight: $font-weight-base;
   cursor: pointer;
   box-shadow: 0 2px 2px 0 #D6D6D6;
   height: 39px;
   padding: 8px;
   margin: 0 0 16px;
-  font-size: 14px;
+  font-size: $font-size-small;
   font-family: inherit;
   line-height: normal;
   border-radius: 3px;
@@ -126,7 +127,7 @@
 .footer-language-selector {
   color: #006179;
   display: inline-block;
-  font-weight: 300;
+  font-weight: $font-weight-light;
 }
 
 .row {
