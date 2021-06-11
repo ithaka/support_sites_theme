@@ -62,7 +62,7 @@
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
-      "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+      "value": "'Ivar Headline', Times, Georgia, serif"
     }, {
       "identifier": "text_font",
       "type": "list",
@@ -86,7 +86,7 @@
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
-      "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+      "value": "'GT America Standard', Helvetica, 'Helvetica Neue', Arial, 'Segoe UI', Roboto, 'Droid Sans', sans-serf" 
     }]
   }, {
     "label": "brand_group_label",
