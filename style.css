@@ -844,13 +844,13 @@ table td, table th {
 
 .footer h1 {
   color: var(--pharos-color-interactive-tertiary);
-  font-family: var(--pharos-font-family-sans-serif) !important;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
   font-weight: var(--pharos-font-weight-bold);
   font-size: 32px;
 }
 
 .footer h4 {
-  font-family: var(--pharos-font-family-sans-serif);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
 }
 

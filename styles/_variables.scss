@@ -53,9 +53,9 @@ $desktop-width: 1024px;
 $max-width-container: 1160px;
 
 // Fonts
-$heading_font: var(--pharos-font-family-body) !default;
-$text_font: var(--pharos-font-family-body) !default;
-$footer_font: var(--pharos-font-family-sans-serif);
+$heading_font: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$text_font: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$footer_font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 $font-weight-base: var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;
