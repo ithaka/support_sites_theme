@@ -45,12 +45,14 @@
 .footer a.button:hover {
  text-decoration: none;
  color: $footer_secondary_text_color;
+ background: $background_color;
 }
 
 .footer a.button {
  min-width: 120px;
  text-decoration: none;
  color: $brand_text_color;
+ background: $footer_background_color;
  border-color: $background_color;
 }
 
@@ -69,13 +71,13 @@
         display: block;
         position: relative;
         svg {
-            fill: #004152;
+            fill: $interactive_color;
             height: 24px;
             width: 24px;
             transition: fill 0.3s ease-in-out;
         }
         svg:hover {
-            fill: $visited-link-color;
+            fill: var(--pharos-color-ui-40); //#d1cfc7
         }
     }
 
@@ -88,11 +90,12 @@
 
 .footer p > small {
   font-size: $font-size-micro !important;
+  color: var(--pharos-color-ui-40); //#d1cfc7
 }
 
 .footer .goog-te-gadget-simple {
-  border: 1px solid rgba(0, 106, 132, 0.5);
-  color: #006a84;
+  border: $interactive_color 1px solid;
+  color: $brand_text_color;
   font-weight: $font-weight-base;
   cursor: pointer;
   box-shadow: 0 2px 2px 0 #D6D6D6;
@@ -103,7 +106,7 @@
   font-family: inherit;
   line-height: normal;
   border-radius: 3px;
-  background: white url(arrow-down-blue.svg) no-repeat right -16px center;
+  background: $footer_background_color no-repeat right -16px center; //white url(arrow-down-blue.svg)
   background-origin: content-box;
   padding-right: 24px;
   background-size: 17px;
@@ -114,8 +117,6 @@
       border: 0; }
     .footer .goog-te-gadget-simple a.goog-te-menu-value span:not(:first-child) {
       display: none; }
-
-
 
 @media (min-width: 1160px) {
   .footer-inner {

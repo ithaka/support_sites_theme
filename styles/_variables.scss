@@ -2,12 +2,13 @@
 
 // Colors
 $brand_color: var(--pharos-color-interactive-primary) !default;
-$brand_text_color: var(--pharos-color-interactive-tertiary) !default; //Color for text with an accent color background
+$brand_text_color: var(--pharos-color-text-white) !default; //Color for text with an accent color background
 $text_color: var(--pharos-color-interactive-secondary) !default;
 $link_color: var(--pharos-color-interactive-secondary) !default;
 $secondary_link_color:var(--pharos-color-interactive-secondary);
 $secondary_link_hover:var(--pharos-color-hover-primary);
 $background_color: var(--pharos-color-ui-10) !default;
+$interactive_color: var(--pharos-color-interactive-tertiary);
 
 $visited-link-color: var(--pharos-color-hover-primary);
 $hover-button-color: var(--pharos-color-hover-primary);
@@ -16,9 +17,9 @@ $secondary-text-color: zass-lighten($text_color, 20%);
 $primary-shade: zass-darken($background_color, 3%); //#f8f8f8 for the default background_color
 $secondary-shade: zass-darken($background_color, 5%); //#f2f2f2 for the default background_color
 
-$footer_text_color: var(--pharos-color-interactive-tertiary);
+$footer_text_color: var(--pharos-color-text-white);
 $footer_secondary_text_color: var(--pharos-color-text-10); 
-$footer_background_color: var(--pharos-color-text-10); 
+$footer_background_color: var(--pharos-color-ui-10); 
 
 //added colors
 $hero-background: url($homepage_background_image); //file in assets
@@ -56,12 +57,12 @@ $max-width-container: 1160px;
 $heading_font: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
 $text_font: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
 $footer_font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$font-weight-base: 400; //var(--pharos-font-weight-regular); // 400
+$font-weight-base: var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;
-$font-weight-bold: 700; //var(--pharos-font-weight-bold);
-$font-size-micro:  12px; //var(--pharos-font-size-micro); //12px | 0.75rem
-$font-size-small: 14px; //var(--pharos-font-size-small); //14px | 0.875rem
-$font-size-base: 16px; //var(--pharos-font-size-base); // 16px | 1rem
-$font-size-large: 20px; //var(--pharos-font-size-large); //20px | 1.25rem
-$font-size-xlarge: 24px; //var(--pharos-font-size-xlarge); //24px | 1.5rem
+$font-weight-bold: var(--pharos-font-weight-bold);
+$font-size-micro:  var(--pharos-font-size-micro); //12px | 0.75rem
+$font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
+$font-size-base: var(--pharos-font-size-base); // 16px | 1rem
+$font-size-large: var(--pharos-font-size-large); //20px | 1.25rem
+$font-size-xlarge: var(--pharos-font-size-xlarge); //24px | 1.5rem
