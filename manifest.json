@@ -62,7 +62,7 @@
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
-      "value": "Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+      "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
     }, {
       "identifier": "text_font",
       "type": "list",
