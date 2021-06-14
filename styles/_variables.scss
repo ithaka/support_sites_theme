@@ -56,12 +56,12 @@ $max-width-container: 1160px;
 $heading_font: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
 $text_font: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
 $footer_font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-$font-weight-base: var(--pharos-font-weight-regular); // 400
+$font-weight-base: 400; //var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;
-$font-weight-bold: var(--pharos-font-weight-bold); // 700
-$font-size-micro: var(--pharos-font-size-micro); //12px | 0.75rem
-$font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
-$font-size-base: var(--pharos-font-size-base); // 16px | 1rem
-$font-size-large: var(--pharos-font-size-large); //20px | 1.25rem
-$font-size-xlarge: var(--pharos-font-size-xlarge); //24px | 1.5rem
+$font-weight-bold: 700; //var(--pharos-font-weight-bold);
+$font-size-micro:  12px; //var(--pharos-font-size-micro); //12px | 0.75rem
+$font-size-small: 14px; //var(--pharos-font-size-small); //14px | 0.875rem
+$font-size-base: 16px; //var(--pharos-font-size-base); // 16px | 1rem
+$font-size-large: 20px; //var(--pharos-font-size-large); //20px | 1.25rem
+$font-size-xlarge: 24px; //var(--pharos-font-size-xlarge); //24px | 1.5rem
