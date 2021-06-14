@@ -837,7 +837,7 @@ table td, table th {
 
 /***** JSTOR Footer *****/
 .footer {
-  background-color: var(--pharos-color-ui-10);
+  background-color: var(--pharos-color-text-10);
   margin-top: 60px;
   padding: 30px 0 60px;
 }
@@ -861,7 +861,7 @@ table td, table th {
   position: absolute;
   top: 2%;
   left: -3%;
-  background: var(--pharos-color-ui-10);
+  background: var(--pharos-color-text-10);
 }
 
 .footer li {
@@ -889,7 +889,7 @@ table td, table th {
   min-width: 120px;
   text-decoration: none;
   color: $brand_text_color;
-  background: var(--pharos-color-ui-10);
+  background: var(--pharos-color-text-10);
   border-color: $background_color;
 }
 
@@ -948,7 +948,7 @@ table td, table th {
   font-family: inherit;
   line-height: normal;
   border-radius: 3px;
-  background: var(--pharos-color-ui-10) no-repeat right -16px center;
+  background: var(--pharos-color-text-10) no-repeat right -16px center;
   background-origin: content-box;
   padding-right: 24px;
   background-size: 17px;

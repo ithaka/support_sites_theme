@@ -19,7 +19,7 @@ $secondary-shade: zass-darken($background_color, 5%); //#f2f2f2 for the default 
 
 $footer_text_color: var(--pharos-color-text-white);
 $footer_secondary_text_color: var(--pharos-color-text-10); 
-$footer_background_color: var(--pharos-color-ui-10); 
+$footer_background_color: var(--pharos-color-text-10); //#1a1a19
 
 //added colors
 $hero-background: url($homepage_background_image); //file in assets
