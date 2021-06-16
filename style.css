@@ -240,6 +240,20 @@ ul.list-horizontal li {
   border-color: $text_color;
 }
 
+body, button, input, optgroup, select, textarea {
+  font-size: var(--pharos-font-size-base);
+  font-weight: var(--pharos-font-weight-regular);
+  letter-spacing: calc(var(--pharos-font-size-base)*-.02);
+  line-height: var(--pharos-line-height-medium);
+}
+
+body, button, input, optgroup, select, textarea, th {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--pharos-font-family-sans-serif);
+  text-rendering: optimizeLegibility;
+}
+
 /***** Buttons *****/
 .button, [role="button"] {
   background: #fff;
