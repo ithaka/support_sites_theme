@@ -59,8 +59,10 @@
         { "label": "Helvetica", "value": "Helvetica, Arial, sans-serif" },
         { "label": "Helvetica Neue", "value": "'Helvetica Neue', Arial, Helvetica, sans-serif" },
         { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },
+        { "label": "Ivar Headline", "value": "'Ivar Headline', serif" },
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
-        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
+        { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" },
+        { "label": "Times", "value": "Times, 'Times New Roman', serif" }
       ],
       "value": "Ivar Headline, Times, Georgia, serif"
     }, {
@@ -76,14 +78,18 @@
         { "label": "Century Gothic", "value": "'Century Gothic', AppleGothic, sans-serif" },
         { "label": "Copperplate Light", "value": "'Copperplate Light', 'Copperplate Gothic Light', serif" },
         { "label": "Courier New", "value": "'Courier New', Courier, monospace" },
+        { "label": "Droid Sans", "value": "'Droid Sans', sans-serif"},
         { "label": "Futura", "value": "Futura, 'Century Gothic', AppleGothic, sans-serif" },
         { "label": "Garamond", "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif" },
         { "label": "Geneva", "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif" },
         { "label": "Georgia", "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif" },
+        { "label": "GT America Standard", "value": "'GT America Standard', sans-serif"},
         { "label": "Helvetica", "value": "Helvetica, Arial, sans-serif" },
         { "label": "Helvetica Neue", "value": "'Helvetica Neue', Arial, Helvetica, sans-serif" },
         { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },     
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
+        { "label": "Roboto", "value": "Roboto, sans-serif"},   
+        { "label": "Segoe UI", "value": "'Segoe UI', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
       "value": "GT America Standard, Helvetica, Helvetica Neue, Arial, Segoe UI, Roboto, Droid Sans, sans-serif"
