@@ -23,9 +23,9 @@ $footer_background_color: var(--pharos-color-text-10); //#1a1a19
 
 //added colors
 $hero-background: url($homepage_background_image); //file in assets
-$hero-text-color: #000000;
-$hero-link-text-color: #000000;
-$hero-link-text-hover: #000000;
+$hero-text-color: var(--pharos-color-interactive-secondary);
+$hero-link-text-color: var(--pharos-color-interactive-secondary);
+$hero-link-text-hover: var(--pharos-color-interactive-primary);
 $dark-gray: #333333;
 $med-gray: #cccccc;
 $gray: #e8e8e8; //article anchor box, bottom of footer
@@ -33,20 +33,19 @@ $lighter-gray: #f9f9f9;
 $alert-color: #ffefc3;
 
 $font-size-bigger: 18px;
-$font-size-base: 16px;
-$font-size-navigation: 14px;
-$font-size-small: 14px;
+$font-size-base: var(--pharos-font-size-base); //16px
+$font-size-navigation: var(--pharos-font-size-small); //14px | 0.875rem
+$font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
 $font-size-smaller: 11px;
 
-$border-color: #000;
+$border-color: var(--pharos-color-overlay);
 
 $button-color: $brand_color;
-$vote-up: #6EB032;
-$vote-down: #E04A35;
-
-$input-font-size: 14px;
+$vote-up: var(--pharos-color-green-base); // #268241
+$vote-down: var(--pharos-color-living-coral-base); // #fb4848
+$input-font-size: var(--pharos-font-size-small); //14px | 0.875rem
 $field-text-color: #333;
-$field-text-focus-color: #000;
+$field-text-focus-color: var(--pharos-color-interactive-secondary);
 
 // Breakpoints variables
 $tablet-width: 768px;
@@ -54,9 +53,9 @@ $desktop-width: 1024px;
 $max-width-container: 1160px;
 
 // Fonts
-$heading_font: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
-$text_font: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
-$footer_font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$heading_font: var(--pharos-font-family-serif) !default;
+$text_font: var(--pharos-font-family-sans-serif) !default;
+$footer_font: var(--pharos-font-family-sans-serif);
 $font-weight-base: var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;

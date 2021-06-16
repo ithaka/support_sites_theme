@@ -61,7 +61,7 @@ a:hover, a:active, a:focus {
 input,
 textarea {
   color: #000;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 input {
@@ -85,11 +85,11 @@ select {
   -moz-appearance: none;
   background: url($assets-dropdown-arrow-svg) no-repeat #fff;
   background-position: right 10px center;
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   border-radius: 4px;
   padding: 8px 30px 8px 10px;
   outline: none;
-  color: #000;
+  color: var(--pharos-color-interactive-secondary);
   width: 100%;
 }
 
@@ -102,7 +102,7 @@ select::-ms-expand {
 }
 
 textarea {
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   border-radius: 2px;
   resize: vertical;
   width: 100%;
@@ -315,13 +315,13 @@ ul.list-horizontal li {
 
 .button-secondary {
   color: lighten($text_color, 20%);
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   background-color: transparent;
 }
 
 .button-secondary:hover, .button-secondary:focus, .button-secondary:active {
   color: $text_color;
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   background-color: darken($background_color, 3%);
 }
 
@@ -576,7 +576,7 @@ table td, table th {
 }
 
 .form .suggestion-list label {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   display: block;
   padding-bottom: 5px;
 }
@@ -844,13 +844,13 @@ table td, table th {
 
 .footer h1 {
   color: var(--pharos-color-text-white);
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  font-family: var(--pharos-font-family-sans-serif) !important;
   font-weight: var(--pharos-font-weight-bold);
   font-size: 32px;
 }
 
 .footer h4 {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: var(--pharos-font-family-sans-serif);
   font-weight: bold;
 }
 
@@ -936,7 +936,7 @@ table td, table th {
 }
 
 .footer .goog-te-gadget-simple {
-  border: var(--pharos-color-interactive-tertiary) 1px solid;
+  border: 1px solid var(--pharos-color-interactive-tertiary);
   color: $brand_text_color;
   font-weight: var(--pharos-font-weight-regular);
   cursor: pointer;
@@ -1102,7 +1102,7 @@ table td, table th {
 }
 
 .search input[type="search"]:focus {
-  color: #000;
+  color: var(--pharos-color-interactive-secondary);
 }
 
 .search::before {
@@ -1126,7 +1126,7 @@ table td, table th {
 .hero {
   background-image: url($homepage_background_image);
   background-size: cover;
-  color: #000000;
+  color: var(--pharos-color-interactive-secondary);
   height: 300px;
   margin: 20px 0 !important;
   padding: 0 20px;
@@ -1289,7 +1289,7 @@ table td, table th {
 
 .blocks-item-internal {
   background-color: transparent;
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
 }
 
 .blocks-item-internal .icon-lock::before {
@@ -1385,12 +1385,12 @@ table td, table th {
 
 .popular-topics a {
   padding: 0 5px;
-  color: #000000;
+  color: var(--pharos-color-interactive-secondary);
   display: inline-block;
 }
 
 .popular-topics a:hover, .popular-topics a:active, .popular-topics a:focus {
-  color: #000000;
+  color: var(--pharos-color-interactive-primary);
   text-decoration: none;
 }
 
@@ -1409,7 +1409,7 @@ table td, table th {
 
 .community,
 .activity {
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--pharos-color-overlay);
   padding: 30px 0;
 }
 
@@ -1424,7 +1424,7 @@ table td, table th {
 }
 
 .recent-activity-item {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   overflow: auto;
   padding: 20px 0;
 }
@@ -1761,14 +1761,14 @@ table td, table th {
 
 .article-body pre {
   background: darken($background_color, 3%);
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   padding: 10px 15px;
   overflow: auto;
   white-space: pre;
 }
 
 .article-body blockquote {
-  border-left: 1px solid #000;
+  border-left: 1px solid var(--pharos-color-overlay);
   color: lighten($text_color, 20%);
   font-style: italic;
   padding: 0 15px;
@@ -1942,21 +1942,21 @@ table td, table th {
 
 .article-vote-up::before {
   content: "\2713";
-  color: #6EB032;
+  color: var(--pharos-color-green-base);
 }
 
 .article-vote-down::before {
   content: "\2715";
-  color: #E04A35;
+  color: var(--pharos-color-living-coral-base);
 }
 
 .article-vote-up.button[aria-selected="true"] {
-  border: 2px solid #6EB032;
+  border: 2px solid var(--pharos-color-green-base);
   background-color: transparent;
 }
 
 .article-vote-down.button[aria-selected="true"] {
-  border: 2px solid #E04A35;
+  border: 2px solid var(--pharos-color-living-coral-base);
   background-color: transparent;
 }
 
@@ -2132,7 +2132,7 @@ table td, table th {
 /***** Comments *****/
 /* Styles comments inside articles, posts and requests */
 .comment {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   padding: 20px 0;
 }
 
@@ -2358,14 +2358,14 @@ table td, table th {
 
 .comment-body pre {
   background: darken($background_color, 3%);
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   padding: 10px 15px;
   overflow: auto;
   white-space: pre;
 }
 
 .comment-body blockquote {
-  border-left: 1px solid #000;
+  border-left: 1px solid var(--pharos-color-overlay);
   color: lighten($text_color, 20%);
   font-style: italic;
   padding: 0 15px;
@@ -2504,7 +2504,7 @@ table td, table th {
 
 /* Community topic page */
 .topic-header {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   font-size: var(--pharos-font-size-small);
 }
 
@@ -2516,7 +2516,7 @@ table td, table th {
 
 .topic-header .dropdown {
   display: block;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--pharos-color-overlay);
   padding: 10px 0;
 }
 
@@ -2621,7 +2621,7 @@ table td, table th {
 
 .striped-list-item {
   align-items: flex-start;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -2926,14 +2926,14 @@ table td, table th {
 
 .post-body pre {
   background: darken($background_color, 3%);
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   padding: 10px 15px;
   overflow: auto;
   white-space: pre;
 }
 
 .post-body blockquote {
-  border-left: 1px solid #000;
+  border-left: 1px solid var(--pharos-color-overlay);
   color: lighten($text_color, 20%);
   font-style: italic;
   padding: 0 15px;
@@ -2964,7 +2964,7 @@ table td, table th {
 }
 
 .post-sidebar {
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--pharos-color-overlay);
   flex: 1;
   padding: 30px 0;
   text-align: center;
@@ -2988,7 +2988,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .post-sidebar h5 {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--pharos-color-overlay);
     padding-bottom: 20px;
   }
 }
@@ -3005,12 +3005,12 @@ table td, table th {
 
 /* Navigation element that collapses on mobile */
 .collapsible-nav {
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
+  border-top: 1px solid var(--pharos-color-overlay);
   flex-direction: column;
   max-height: 45px;
   overflow: hidden;
-  font-size: 14px;
+  font-size: var(--pharos-font-size-small);
 }
 
 @media (min-width: 768px) {
@@ -3177,7 +3177,7 @@ table td, table th {
 
 .my-activities-sub-nav {
   background-color: transparent;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   margin-bottom: 30px;
 }
 
@@ -3531,7 +3531,7 @@ table td, table th {
 
 .request-main .comment-show-container {
   border-radius: 2px;
-  border: 1px solid #000;
+  border: 1px solid var(--pharos-color-overlay);
   color: lighten($text_color, 20%);
   text-align: inherit;
   padding: 8px 25px;
@@ -3578,7 +3578,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .request-title {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--pharos-color-overlay);
     margin-bottom: 0;
     max-width: 66%;
     padding-bottom: 20px;
@@ -3586,8 +3586,8 @@ table td, table th {
 }
 
 .request-sidebar {
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
+  border-top: 1px solid var(--pharos-color-overlay);
   flex: 1 0 auto;
   order: 0;
 }
@@ -3616,7 +3616,7 @@ table td, table th {
 }
 
 .request-details {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--pharos-color-overlay);
   font-size: 0;
   margin: 0;
   padding-bottom: 20px;

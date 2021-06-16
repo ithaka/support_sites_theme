@@ -24,7 +24,7 @@
     position: absolute;
     top: 2%;
     left: -3%;
-    background: $footer_background_color;
+    background: $footer_secondary_text_color;
 }
 
 .footer li {
@@ -94,7 +94,7 @@
 }
 
 .footer .goog-te-gadget-simple {
-  border: $interactive_color 1px solid;
+  border: 1px solid $interactive_color;
   color: $brand_text_color;
   font-weight: $font-weight-base;
   cursor: pointer;

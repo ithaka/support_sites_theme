@@ -47,13 +47,12 @@
 
     &:hover,
     &:active,
-    &:focus, {
+    &:focus {
       color: $hero-link-text-hover;
-      text-decoration: none;
+      text-decoration: none;  
     }
   }
 }
-
 
 /***** Community section in homepage *****/
 .community {
