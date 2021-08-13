@@ -1119,7 +1119,7 @@ table td, table th {
 }
 
 .search input[type="search"]:focus {
-  color: var(--pharos-color-focus);
+  border: 1px solid var(--pharos-color-focus);
 }
 
 .search::before {

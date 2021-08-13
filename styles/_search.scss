@@ -20,7 +20,7 @@
     }
 
     &:focus {
-      color: $field-text-focus-color;
+      border: 1px solid $field-text-focus-color;
     }
   }
 
