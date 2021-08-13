@@ -68,6 +68,10 @@
     &:active {
       text-decoration: none;
     }
+
+    a { 
+      text-decoration: underline;
+    }
   }
 
   &-item-title {

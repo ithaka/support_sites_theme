@@ -44,8 +44,8 @@ $button-color: $brand_color;
 $vote-up: var(--pharos-color-green-base); // #268241
 $vote-down: var(--pharos-color-living-coral-base); // #fb4848
 $input-font-size: var(--pharos-font-size-small); //14px | 0.875rem
-$field-text-color: #333;
-$field-text-focus-color: var(--pharos-color-interactive-secondary);
+$field-text-color: var(--pharos-color-text-10);
+$field-text-focus-color: var(--pharos-color-focus);
 
 // Breakpoints variables
 $tablet-width: 768px;

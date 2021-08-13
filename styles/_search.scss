@@ -3,9 +3,9 @@
   position: relative;
 
   input[type="search"] {
-    border: 1px solid $med-gray;
+    border: 1px solid $border-color;
     border-radius: 3px 0 0 3px;
-    box-shadow: inset 1px 0 10px -3px $med-gray;
+    box-shadow: none;
     box-sizing: border-box;
     color: $field-text-color;
     height: 40px;
@@ -28,8 +28,8 @@
   &::before {
     @extend .icon;
     @include vertical-align;
-    background-color: #fff;
-    color: #777;
+    background-color:$background_color;
+    color: $text-color;
     content: "\1F50D";
     font-size: 18px;
     position: absolute;
@@ -38,6 +38,10 @@
     [dir="rtl"] & {
       right: 15px;
       left: auto;
+    }
+
+    &:hover {
+      color: $brand_color;
     }
   }
 }

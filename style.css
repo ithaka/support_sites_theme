@@ -56,6 +56,7 @@ a {
 
 a:hover, a:active, a:focus {
   color: var(--pharos-color-hover-primary);
+  text-decoration: none;
 }
 
 input,
@@ -89,7 +90,7 @@ select {
   border-radius: 4px;
   padding: 8px 30px 8px 10px;
   outline: none;
-  color: var(--pharos-color-interactive-secondary);
+  color: var(--pharos-color-focus);
   width: 100%;
 }
 
@@ -1091,7 +1092,7 @@ table td, table th {
 
 .breadcrumbs li a:hover {
   color: var(--pharos-color-hover-primary);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /***** Search field *****/
@@ -1100,11 +1101,11 @@ table td, table th {
 }
 
 .search input[type="search"] {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--pharos-color-overlay);
   border-radius: 3px 0 0 3px;
-  box-shadow: inset 1px 0 10px -3px #cccccc;
+  box-shadow: none;
   box-sizing: border-box;
-  color: #333;
+  color: var(--pharos-color-text-10);
   height: 40px;
   padding-left: 15px;
   padding-right: 20px;
@@ -1118,15 +1119,15 @@ table td, table th {
 }
 
 .search input[type="search"]:focus {
-  color: var(--pharos-color-interactive-secondary);
+  color: var(--pharos-color-focus);
 }
 
 .search::before {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
-  color: #777;
+  background-color: $background_color;
+  color: $text_color;
   content: "\1F50D";
   font-size: 18px;
   position: absolute;
@@ -1136,6 +1137,10 @@ table td, table th {
 [dir="rtl"] .search::before {
   right: 15px;
   left: auto;
+}
+
+.search::before:hover {
+  color: $brand_color;
 }
 
 /***** Hero component *****/
@@ -1333,6 +1338,10 @@ table td, table th {
 
 .blocks-item-link:hover, .blocks-item-link:focus, .blocks-item-link:active {
   text-decoration: none;
+}
+
+.blocks-item-link a {
+  text-decoration: underline;
 }
 
 .blocks-item-title {
