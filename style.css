@@ -21,22 +21,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: .95;
+  font-size: 32px;
+  line-height: 36px;
   letter-spacing: -1.55px;
 }
 
 h2 {
   font-family: $text_font;
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 28px;
   margin: 40px 0 0;
 }
 
 h3 {
   font-family: $text_font;
   font-size: 18px;
-  margin: 30px 0 0;
+  margin: 48px 0 0;
 }
 
 h4 {
@@ -263,7 +263,7 @@ body, button, input, optgroup, select, textarea, th {
   color: $brand_color;
   cursor: pointer;
   display: inline-block;
-  font-size: var(--pharos-font-size-micro);
+  font-size: var(--pharos-font-size-base);
   line-height: 2.34;
   margin: 0;
   padding: 0 20px;
@@ -859,7 +859,7 @@ table td, table th {
 
 .footer h1 {
   color: var(--pharos-color-text-white);
-  font-family: var(--pharos-font-family-sans-serif) !important;
+  font-family: $heading_font !important;
   font-weight: var(--pharos-font-weight-bold);
   font-size: 32px;
 }
@@ -887,6 +887,7 @@ table td, table th {
 .footer a {
   color: var(--pharos-color-text-white);
   text-decoration: none;
+  font-size: var(--pharos-font-size-base);
 }
 
 .footer a:hover {
@@ -946,7 +947,7 @@ table td, table th {
 }
 
 .footer p > small {
-  font-size: var(--pharos-font-size-micro) !important;
+  font-size: var(--pharos-font-size-small) !important;
   color: var(--pharos-color-ui-40);
 }
 
@@ -1349,8 +1350,7 @@ table td, table th {
 }
 
 .blocks-item-description {
-  font-size: var(--pharos-font-size-small);
-  font-weight: 300;
+  font-size: var(--pharos-font-size-base);
   margin: 0;
   color: var(--pharos-color-interactive-secondary);
   text-decoration: none;
@@ -1941,7 +1941,7 @@ table td, table th {
 }
 
 .article-vote::before {
-  font-size: 8px;
+  font-size: var(--pharos-font-size-base);
   margin-right: 10px;
 }
 
@@ -1967,7 +1967,7 @@ table td, table th {
 
 .article-vote-up::before {
   content: "\2713";
-  color: var(--pharos-color-green-base);
+  color: var(--pharos-color-feedback-success);
 }
 
 .article-vote-down::before {
@@ -1976,7 +1976,7 @@ table td, table th {
 }
 
 .article-vote-up.button[aria-selected="true"] {
-  border: 2px solid var(--pharos-color-green-base);
+  border: 2px solid var(--pharos-color-feedback-success);
   background-color: transparent;
 }
 

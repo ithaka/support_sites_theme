@@ -41,7 +41,7 @@ $font-size-smaller: 11px;
 $border-color: var(--pharos-color-overlay);
 
 $button-color: $brand_color;
-$vote-up: var(--pharos-color-green-base); // #268241
+$vote-up: var(--pharos-color-feedback-success); // #268241
 $vote-down: var(--pharos-color-living-coral-base); // #fb4848
 $input-font-size: var(--pharos-font-size-small); //14px | 0.875rem
 $field-text-color: var(--pharos-color-text-10);
@@ -59,7 +59,7 @@ $footer_font: var(--pharos-font-family-sans-serif);
 $font-weight-base: var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;
-$font-weight-bold: var(--pharos-font-weight-bold);
+$font-weight-bold: var(--pharos-font-weight-bold); // 700
 $font-size-micro:  var(--pharos-font-size-micro); //12px | 0.75rem
 $font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
 $font-size-base: var(--pharos-font-size-base); // 16px | 1rem

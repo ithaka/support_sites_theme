@@ -218,7 +218,7 @@
 
     &::before {
       @extend .icon;
-      font-size: 8px;
+      font-size: $font-size-base;
       margin-right: 10px;
 
       [dir="rtl"] & {
