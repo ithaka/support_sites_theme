@@ -7,14 +7,20 @@
     margin-top: 30px;
     padding: 0;
     background-color: #f9f9f9;
-
+  h1 {
+    font-family: $heading_font;
+    font-size: 32px;
+    font-weight: $font-weight-bold;
+    line-height: 36px;
+  }
+  
   p {
     line-height: 1;
     letter-spacing: 0;
   }
 
   li {
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     margin-bottom: 11.2px;
     padding-right: 5px;
   }

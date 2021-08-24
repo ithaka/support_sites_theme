@@ -5,9 +5,13 @@
     margin-bottom: 30px;
   }
 
+  h1 {
+    font-family: $heading_font;
+    font-size: 32px;
+  }
   h2 {
     margin-top: 0;
-    font-size: 22px;
+    font-size: 24px;
     letter-spacing: -0.8px;
     font-family: $text_font;
   }
@@ -36,7 +40,7 @@
     max-width: 60%;
     margin: 0 auto;
   }
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     position: relative;
     top: 25px;
 
