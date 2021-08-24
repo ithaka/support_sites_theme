@@ -26,11 +26,11 @@ $hero-background: url($homepage_background_image); //file in assets
 $hero-text-color: var(--pharos-color-interactive-secondary);
 $hero-link-text-color: var(--pharos-color-interactive-secondary);
 $hero-link-text-hover: var(--pharos-color-interactive-primary);
-$dark-gray: #333333;
-$med-gray: #cccccc;
-$gray: #e8e8e8; //article anchor box, bottom of footer
-$lighter-gray: #f9f9f9;
-$alert-color: #ffefc3;
+$dark-gray: var(--pharos-color-ui-50);
+$med-gray: var(--pharos-color-ui-40);
+$gray: var(--pharos-color-ui-30); //article anchor box, bottom of footer
+$lighter-gray: var(--pharos-color-ui-20);
+$alert-color: var(--pharos-color-ui-10);
 
 $font-size-bigger: 18px;
 $font-size-base: var(--pharos-font-size-base); //16px

@@ -237,7 +237,7 @@ ul.list-horizontal li {
 }
 
 .dropdown-menu [role="menuitem"][aria-selected="true"], .dropdown-menu [role="menuitem"]:hover, .dropdown-menu [role="menuitem"]:active, .dropdown-menu [role="menuitem"]:focus {
-  background: #e8e8e8;
+  background: var(--pharos-color-ui-30);
   border-color: $text_color;
 }
 
@@ -391,7 +391,7 @@ table td {
 
 table td, table th {
   padding: 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--pharos-color-ui-40);
   vertical-align: top;
   text-align: left;
   font-size: var(--pharos-font-size-small);
@@ -458,7 +458,7 @@ table td, table th {
 }
 
 .form-field input {
-  border: 1px solid #333333;
+  border: 1px solid var(--pharos-color-ui-50);
   border-radius: 4px;
   padding: 10px;
   width: 100%;
@@ -478,7 +478,7 @@ table td, table th {
 }
 
 .form-field ul {
-  border: 1px solid #333333;
+  border: 1px solid var(--pharos-color-ui-50);
   border-radius: 4px;
 }
 
@@ -495,7 +495,7 @@ table td, table th {
 }
 
 .form-field input[type="text"] {
-  border: 1px solid #333333;
+  border: 1px solid var(--pharos-color-ui-50);
   border-radius: 4px;
 }
 
@@ -509,11 +509,11 @@ table td, table th {
 
 .form-field a, .form-field a:hover {
   text-decoration: none;
-  color: #333333;
+  color: var(--pharos-color-ui-50);
 }
 
 .form-field .nesty-input {
-  border: 1px solid #333333;
+  border: 1px solid var(--pharos-color-ui-50);
   border-radius: 4px;
   height: 40px;
   line-height: 40px;
@@ -1822,8 +1822,8 @@ table td, table th {
 }
 
 .article-anchorbox {
-  background-color: #f9f9f9;
-  border: 1px solid #cccccc;
+  background-color: var(--pharos-color-ui-20);
+  border: 1px solid var(--pharos-color-ui-40);
   border-width: 1px 0;
   margin-bottom: 30px;
   padding: 15px;
@@ -2086,7 +2086,7 @@ table td, table th {
 }
 
 .upload-dropzone {
-  border: 1px solid #333333;
+  border: 1px solid var(--pharos-color-ui-50);
   border-radius: 4px;
 }
 
@@ -3730,8 +3730,8 @@ table td, table th {
 }
 
 .pagination li:hover:not(.pagination-current) {
-  background-color: #e8e8e8;
-  border-color: #e8e8e8;
+  background-color: var(--pharos-color-ui-30);
+  border-color: var(--pharos-color-ui-30);
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   border-radius: 3px;
 }
@@ -4721,14 +4721,14 @@ html[lang|="ja"] .search-result-description em {
 }
 
 .callout {
-  border: 1px solid #cccccc;
+  border: 1px solid var(--pharos-color-ui-40);
   border-width: 1px 0;
-  background: #f9f9f9;
+  background: var(--pharos-color-ui-20);
   color: $text_color;
   margin: 20px 0;
   padding: 30px;
 }
 
 .callout.alert {
-  background: #ffefc3;
+  background: var(--pharos-color-ui-10);
 }
