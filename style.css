@@ -860,7 +860,7 @@ table td, table th {
 
 .footer h1 {
   color: var(--pharos-color-text-white);
-  font-family: $heading_font !important;
+  font-family: var(--pharos-font-family-serif) !important;
   font-weight: var(--pharos-font-weight-bold);
   font-size: 32px;
 }
@@ -1348,7 +1348,7 @@ table td, table th {
 
 .blocks-item-title {
   margin-bottom: 0;
-  font-family: $heading_font;
+  font-family: var(--pharos-font-family-serif);
 }
 
 .blocks-item-description {
@@ -2625,7 +2625,7 @@ table td, table th {
   content: attr(data-follower-count);
   color: $brand_color;
   display: inline-block;
-  font-family: $heading_font;
+  font-family: var(--pharos-font-family-serif);
   margin-left: 15px;
   padding-left: 10px;
   position: absolute;
