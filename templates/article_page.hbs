@@ -55,7 +55,8 @@
       </section>
 
       <footer>
-        {{!-- <div class="article-footer">
+        {{!-- comment out this below div to remove comments --}}
+        <div class="article-footer">
           {{#if settings.show_article_sharing}}
             <div class="article-share">{{share}}</div>
           {{/if}}
@@ -67,7 +68,7 @@
               </a>
             {{/if}}
           {{/if}}
-        </div> --}}
+        </div>
         {{#with article}}
           <div class="article-votes">
             <span class="article-votes-question">{{t 'was_this_article_helpful'}}</span>
@@ -90,8 +91,8 @@
           <a href="#article-container">{{t 'return_to_top'}}<span class="icon-arrow-up"></span></a>
         </div>
       </footer>
-
-      {{!-- {{#if settings.show_article_comments}}
+      {{!-- also comment this if block to remove comments --}}
+      {{#if settings.show_article_comments}}
         <div class="article-comments" id="article-comments">
           <section class="comments">
             <header class="comment-overview">
@@ -188,7 +189,7 @@
             <p class="comment-callout">{{comment_callout}}</p>
           </section>
         </div>
-      {{/if}} --}}
+      {{/if}}
     </article>
 
     <section class="article-sidebar">
