@@ -1350,7 +1350,7 @@ table td, table th {
 
 .blocks-item-title {
   margin-bottom: 0;
-  font-family: var(--pharos-font-family-serif);
+  font-family: $text_font !important;
 }
 
 .blocks-item-description {
@@ -1855,6 +1855,10 @@ table td, table th {
 
 .article-content li {
   margin-bottom: 14px;
+}
+
+.article-content h2 h3 h4 {
+  font-family: $text_font !important;
 }
 
 .article-footer {

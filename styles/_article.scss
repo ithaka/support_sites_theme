@@ -132,6 +132,10 @@
     li {
       margin-bottom: 14px;
     }
+
+    h2 h3 h4 {
+      font-family: $text_font !important;
+    }
   }
 
   &-footer {
