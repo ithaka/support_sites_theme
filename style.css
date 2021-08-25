@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--pharos-font-family-serif) !important;
+  font-family: $text_font;
   font-weight: var(--pharos-font-weight-bold);
   margin-top: 0;
 }
@@ -24,7 +24,7 @@ h1 {
   font-size: 32px;
   line-height: 36px;
   letter-spacing: -1.55px;
-  font-family: var(--pharos-font-family-serif);
+  font-family: var(--pharos-font-family-serif) !important;
 }
 
 h2 {
@@ -37,7 +37,7 @@ h2 {
 h3 {
   font-family: $text_font;
   font-size: 18px;
-  margin: 48px 0 0;
+  margin: 20px 0 0;
 }
 
 h4 {
@@ -1630,7 +1630,7 @@ table td, table th {
 
 .section-list-item h3 {
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 48px;
 }
 
 .section-list-item a {
@@ -2030,7 +2030,7 @@ table td, table th {
 }
 
 .sidenav-item {
-  font-size: var(--pharos-font-size-small);
+  font-size: var(--pharos-font-size-base);
   display: block;
   margin-bottom: 10px;
 }
