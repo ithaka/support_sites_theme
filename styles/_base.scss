@@ -13,8 +13,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $text_font;
+h2, h3, h4, h5, h6 {
+  font-family: $text_font !important;
   font-weight: $font-weight-bold;
   margin-top: 0;
 }
@@ -24,7 +24,10 @@ h1 {
   line-height: 36px;
   letter-spacing: -1.55px;
   font-family: $header_font !important;
+  font-weight: $font-weight-bold;
+  margin-top: 0;
 }
+
 h2 {
   font-family: $text_font;
   font-size: 24px;
