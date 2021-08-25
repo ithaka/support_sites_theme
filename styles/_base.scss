@@ -29,20 +29,20 @@ h1 {
 }
 
 h2 {
-  font-family: $text_font;
+  font-family: $text_font !important;
   font-size: 24px;
   line-height: 28px;
   margin: 40px 0 0;
 }
 h3 {
-  font-family: $text_font;
+  font-family: $text_font !important;
   font-size: 18px;
   margin: 20px 0 0;
 }
 
 h4 {
   font-size: $font-size-base;
-  font-family: $text_font;
+  font-family: $text_font !important;
 }
 
 small {
