@@ -967,9 +967,6 @@ table td, table th {
   padding: var(--pharos-spacing-one-quarter-x) var(--pharos-spacing-three-quarters-x);
   border-radius: var(--pharos-radius-base-standard);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   appearance: none;
   color: var(--pharos-color-interactive-tertiary);
