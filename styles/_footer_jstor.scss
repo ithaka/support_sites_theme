@@ -114,23 +114,14 @@
   appearance: none;
   color: $interactive_color;
   border-color: $interactive_color;
-  // border: 1px solid $interactive_color;
-  // color: $brand_text_color;
-  // font-weight: $font-weight-base;
-  // cursor: pointer;
-  // box-shadow: 0 2px 2px 0 #D6D6D6;
-  // height: 39px;
-  // padding: 8px;
-  // margin: 0 0 16px;
-  // font-size: $font-size-small;
-  // font-family: inherit;
-  // line-height: normal;
-  // border-radius: 3px;
-  // background: $footer_background_color no-repeat right -16px center; //white url(arrow-down-blue.svg)
-  // background-origin: content-box;
-  // padding-right: 24px;
-  // background-size: 17px;
-  // width: 100%; 
+  background-color: transparent;
+
+  &:hover {
+    color: var(--pharos-color-interactive-secondary);
+    background-color: var(--pharos-color-interactive-tertiary);
+    border-color: var(--pharos-color-interactive-tertiary);
+}
+
 }
   .footer .goog-te-gadget-simple a.goog-te-menu-value {
     color: inherit; }
@@ -145,6 +136,7 @@
     width: 90%;
   }
 }
+
 
 .footer-language-selector {
   color: #006179;

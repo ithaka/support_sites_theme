@@ -974,6 +974,13 @@ table td, table th {
   appearance: none;
   color: var(--pharos-color-interactive-tertiary);
   border-color: var(--pharos-color-interactive-tertiary);
+  background-color: transparent;
+}
+
+.footer .goog-te-gadget-simple:hover {
+  color: var(--pharos-color-interactive-secondary);
+  background-color: var(--pharos-color-interactive-tertiary);
+  border-color: var(--pharos-color-interactive-tertiary);
 }
 
 .footer .goog-te-gadget-simple a.goog-te-menu-value {
