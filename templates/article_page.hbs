@@ -56,7 +56,7 @@
 
       <footer>
         {{!-- comment out this below div to remove comments --}}
-        {{!-- <div class="article-footer">
+        {{!-- {{<div class="article-footer">
           {{#if settings.show_article_sharing}}
             <div class="article-share">{{share}}</div>
           {{/if}}
@@ -68,7 +68,7 @@
               </a>
             {{/if}}
           {{/if}}
-        </div>
+        </div> --}}
         {{#with article}}
           <div class="article-votes">
             <span class="article-votes-question">{{t 'was_this_article_helpful'}}</span>
@@ -78,14 +78,13 @@
             </div>
             <class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
-          </div> --}}
+          </div>
         {{/with}}
 
         <!--This prompts people to submit native Zendesk form-->
-        <!--<div class="article-more-questions">
+        <div class="article-more-questions">
           {{request_callout}}
         </div>
-        -->
         <div class="article-return-to-top">
           <a href="#article-container">{{t 'return_to_top'}}<span class="icon-arrow-up"></span></a>
         </div>
@@ -110,7 +109,7 @@
                     {{/each}}
                   </span>
                 </div>
-              {{/if}} --}}
+              {{/if}}
             </header>
 
             <ul id="comments" class="comment-list">
@@ -188,7 +187,7 @@
             <p class="comment-callout">{{comment_callout}}</p>
           </section>
         </div>
-      {{/if}}
+      {{/if}} --}}
     </article>
 
     <section class="article-sidebar">
