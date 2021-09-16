@@ -42,6 +42,11 @@
     text-decoration: none;
   }
 
+  .footer a:hover {
+    color: $footer_text_color;
+    text-decoration: underline;
+  }
+
   &-inner {
     @include max-width-container;
     display: flex;
@@ -87,7 +92,6 @@
   & > .expanded.row {
     border: 0;
     background: $footer_background_color;
-    padding-top: 16px;
     display: flex;
 
     ul.list-horizontal {

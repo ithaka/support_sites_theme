@@ -48,7 +48,7 @@ h4 {
 }
 
 small {
-  font-size: 80%;
+  font-size: var(--pharos-font-size-small);
   line-height: 1.1;
 }
 
@@ -901,6 +901,11 @@ table td, table th {
   text-decoration: none;
 }
 
+.footer .footer a:hover {
+  color: var(--pharos-color-text-white);
+  text-decoration: underline;
+}
+
 .footer-inner {
   max-width: 1160px;
   margin: 0 auto;
@@ -963,7 +968,6 @@ table td, table th {
 .footer > .expanded.row {
   border: 0;
   background: var(--pharos-color-text-10);
-  padding-top: 16px;
   display: flex;
 }
 
