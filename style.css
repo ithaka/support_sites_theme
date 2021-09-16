@@ -855,7 +855,6 @@ table td, table th {
 
 /***** Forum Footer *****/
 .footer {
-  margin-top: 30px;
   padding: 0;
   background-color: var(--pharos-color-text-10);
   /* Google Translate styles */
@@ -863,7 +862,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .footer {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 
