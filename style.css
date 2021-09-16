@@ -867,6 +867,12 @@ table td, table th {
   }
 }
 
+.footer .forum-footer-header {
+  position: absolute;
+  width: 295px;
+  padding-right: 13px;
+}
+
 .footer .footer h1 {
   color: var(--pharos-color-text-white);
   font-family: var(--pharos-font-family-serif) !important;
