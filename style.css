@@ -868,8 +868,8 @@ table td, table th {
 
 .footer .forum-footer-header {
   position: absolute;
-  width: 295px;
-  padding-right: 13px;
+  width: 305px;
+  padding-left: 20px;
 }
 
 .footer .footer h1 {
