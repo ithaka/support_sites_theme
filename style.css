@@ -885,7 +885,7 @@ table td, table th {
 }
 
 .footer li {
-  font-size: var(--pharos-font-size-small);
+  font-size: var(--pharos-font-size-base);
   margin-bottom: 11.2px;
   padding-right: 5px;
 }
@@ -941,6 +941,7 @@ table td, table th {
   .footer-legal {
     width: 33.33%;
     margin-top: 0;
+    color: var(--pharos-color-ui-40);
   }
 }
 
