@@ -7,6 +7,18 @@
     padding: 0;
     background-color: $footer_background_color;
 
+  .footer h1 {
+    color: $footer_text_color;
+    font-family: $header_font !important;
+    font-weight: $font-weight-bold;
+    font-size: 32px;
+  }
+  
+  .footer h4 {
+    font-family: $footer_font;
+    font-weight: bold;
+  }
+
   p {
     line-height: 1;
     letter-spacing: 0;
@@ -67,7 +79,7 @@
 
   & > .expanded.row {
     border: 0;
-    background: #e8e8e8;
+    background: $footer_background_color;
     padding-top: 16px;
     display: flex;
 
@@ -141,13 +153,13 @@
           display: block;
           position: relative;
           svg {
-              fill: #004152;
+              fill: $interactive_color;
               height: 24px;
               width: 24px;
               transition: fill 0.3s ease-in-out;
           }
           svg:hover {
-              fill: $visited-link-color;
+              fill: var(--pharos-color-ui-40); //#d1cfc7
           }
       }
 

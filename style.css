@@ -867,6 +867,18 @@ table td, table th {
   }
 }
 
+.footer .footer h1 {
+  color: var(--pharos-color-text-white);
+  font-family: var(--pharos-font-family-serif) !important;
+  font-weight: var(--pharos-font-weight-bold);
+  font-size: 32px;
+}
+
+.footer .footer h4 {
+  font-family: var(--pharos-font-family-sans-serif);
+  font-weight: bold;
+}
+
 .footer p {
   line-height: 1;
   letter-spacing: 0;
@@ -944,7 +956,7 @@ table td, table th {
 
 .footer > .expanded.row {
   border: 0;
-  background: #e8e8e8;
+  background: var(--pharos-color-text-10);
   padding-top: 16px;
   display: flex;
 }
@@ -1029,14 +1041,14 @@ table td, table th {
 }
 
 .footer .footer .icon-link svg {
-  fill: #004152;
+  fill: var(--pharos-color-interactive-tertiary);
   height: 24px;
   width: 24px;
   transition: fill 0.3s ease-in-out;
 }
 
 .footer .footer .icon-link svg:hover {
-  fill: var(--pharos-color-hover-primary);
+  fill: var(--pharos-color-ui-40);
 }
 
 .footer .goog-te-gadget-simple {
