@@ -1,10 +1,8 @@
 /***** Forum Footer *****/
 .footer {
   @include desktop {
-    padding-top: 20px;
   }
     padding: 15px 0 30px;
-    margin-top: 60px;
     background-color: $footer_background_color;
 
   .forum-footer-header  {

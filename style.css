@@ -856,15 +856,8 @@ table td, table th {
 /***** Forum Footer *****/
 .footer {
   padding: 15px 0 30px;
-  margin-top: 60px;
   background-color: var(--pharos-color-text-10);
   /* Google Translate styles */
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    padding-top: 20px;
-  }
 }
 
 .footer .forum-footer-header {
