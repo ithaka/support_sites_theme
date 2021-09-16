@@ -3,14 +3,14 @@
   @include desktop {
     padding-top: 20px;
   }
-    padding: 0;
+    padding: 30px 0 60px;
+    margin-top: 60px;
     background-color: $footer_background_color;
 
   .forum-footer-header  {
     position: absolute;
     width: 305px;
     padding-left: 20px;
-
   }
 
   .footer h1 {
@@ -46,6 +46,7 @@
     color: $footer_text_color;
     text-decoration: underline;
   }
+
 
   &-inner {
     @include max-width-container;
