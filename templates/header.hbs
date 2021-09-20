@@ -58,9 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="button" href="{{settings.login_link}}">Log in to {{settings.login_product_name}}</a>
       <!--{{link 'new_request' class='submit-a-request'}}-->
     </nav>
-    {{!-- {{#if signed_in}}
-    {{user_info}}
-    {{/if}} --}}
+
     {{#if signed_in}}
       <div class="user-info dropdown">
         <button class="dropdown-toggle" aria-haspopup="true">
@@ -79,10 +77,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           {{link "sign_out" role="menuitem"}}
         </div>
       </div>
-    {{!-- {{else}}
-      {{#link "sign_in" class="sign-in"}}
-        {{t 'sign_in'}}
-      {{/link}} --}}
     {{/if}}
   </div>
 </header>
