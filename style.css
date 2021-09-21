@@ -857,6 +857,7 @@ table td, table th {
 .footer {
   padding: 15px 0 15px;
   background-color: var(--pharos-color-text-10);
+  margin-top: 30px;
   /* Google Translate styles */
 }
 
@@ -864,7 +865,6 @@ table td, table th {
   position: absolute;
   width: 305px;
   padding-left: 20px;
-  margin-top: 30px;
 }
 
 .footer .footer h1 {
