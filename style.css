@@ -853,105 +853,207 @@ table td, table th {
   width: 14px;
 }
 
-/***** JSTOR Footer *****/
+/***** Forum Footer *****/
 .footer {
+  padding: 15px 0 15px;
   background-color: var(--pharos-color-text-10);
-  margin-top: 60px;
-  padding: 30px 0 60px;
+  /* Google Translate styles */
 }
 
-.footer h1 {
+.footer .forum-footer-header {
+  position: absolute;
+  width: 305px;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.footer .footer h1 {
   color: var(--pharos-color-text-white);
   font-family: var(--pharos-font-family-serif) !important;
   font-weight: var(--pharos-font-weight-bold);
   font-size: 32px;
 }
 
-.footer h4 {
+.footer .footer h4 {
   font-family: var(--pharos-font-family-sans-serif);
   font-weight: bold;
 }
 
-.footer .column-divider:after {
-  content: ' ';
-  height: 90%;
-  width: 2px;
-  position: absolute;
-  top: 2%;
-  left: -3%;
-  background: var(--pharos-color-text-10);
+.footer p {
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .footer li {
-  font-size: var(--pharos-font-size-small);
-  margin-bottom: 11px;
+  font-size: var(--pharos-font-size-base);
+  margin-bottom: 11.2px;
+  padding-right: 5px;
 }
 
 .footer a {
   color: var(--pharos-color-text-white);
+  font-weight: var(--pharos-font-weight-bold);
   text-decoration: none;
-  font-size: var(--pharos-font-size-base);
 }
 
-.footer a:hover {
+.footer .footer a:hover {
   color: var(--pharos-color-text-white);
   text-decoration: underline;
-}
-
-.footer a.button:hover {
-  text-decoration: none;
-  color: var(--pharos-color-text-10);
-  background: $background_color;
-}
-
-.footer a.button {
-  min-width: 120px;
-  text-decoration: none;
-  color: $brand_text_color;
-  background: var(--pharos-color-text-10);
-  border-color: $background_color;
-}
-
-.footer .show-for-sr {
-  display: none;
-}
-
-.footer ul.social-icons li {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-.footer ul.list-horizontal li {
-  display: inline-block;
-  margin-right: 1.2rem;
-}
-
-.footer .icon-link {
-  display: block;
-  position: relative;
-}
-
-.footer .icon-link svg {
-  fill: var(--pharos-color-interactive-tertiary);
-  height: 24px;
-  width: 24px;
-  transition: fill 0.3s ease-in-out;
-}
-
-.footer .icon-link svg:hover {
-  fill: var(--pharos-color-ui-40);
 }
 
 .footer-inner {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
+  display: flex;
   justify-content: space-between;
 }
 
-.footer p > small {
-  font-size: var(--pharos-font-size-small) !important;
-  color: var(--pharos-color-ui-40);
+@media (min-width: 1160px) {
+  .footer-inner {
+    padding: 0;
+    width: 90%;
+  }
+}
+
+.footer-links {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .footer-links {
+    width: 66.67%;
+    padding-left: 0 !important;
+  }
+}
+
+.footer-links a {
+  text-decoration: none;
+  padding-right: 5px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  .footer-legal {
+    width: 33.33%;
+    margin-top: 0;
+    color: var(--pharos-color-ui-40);
+  }
+}
+
+.footer .linklist {
+  width: 33.33333%;
+}
+
+.footer-language-selector {
+  color: lighten($text_color, 20%);
+  display: inline-block;
+  font-weight: 300;
+}
+
+.footer > .expanded.row {
+  border: 0;
+  background: var(--pharos-color-text-10);
+  display: flex;
+}
+
+.footer > .expanded.row ul.list-horizontal {
+  padding-top: 11.2px;
+}
+
+.footer > .expanded.row a {
+  text-decoration: none;
+}
+
+.footer > .expanded.row a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 42.79464rem) {
+  .footer .footer > .expanded.row ul {
+    margin-bottom: 20px;
+  }
+}
+
+.footer .row {
+  max-width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer .row.expanded {
+  max-width: none;
+}
+
+.footer .row.expanded .row {
+  max-width: 1160px;
+  width: 90%;
+}
+
+.footer .bottom-section {
+  margin: 5px auto 35px;
+}
+
+.footer .bottom-section .top-spacing {
+  margin-top: 25px;
+}
+
+@media (min-width: 1024px) {
+  .footer .bottom-section .top-spacing {
+    margin-top: 45px;
+  }
+}
+
+.footer .columns {
+  float: left;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .footer .columns {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .footer .columns.large-9 {
+    width: 75%;
+  }
+  .footer .columns.large-3 {
+    width: 25%;
+  }
+}
+
+.footer .columns .columns {
+  padding: 0;
+}
+
+.footer .footer ul.list-horizontal li {
+  display: inline-block;
+  margin-right: 1.2rem;
+}
+
+.footer .footer .icon-link {
+  display: block;
+  position: relative;
+}
+
+.footer .footer .icon-link svg {
+  fill: var(--pharos-color-interactive-tertiary);
+  height: 24px;
+  width: 24px;
+  transition: fill 0.3s ease-in-out;
+}
+
+.footer .footer .icon-link svg:hover {
+  fill: var(--pharos-color-ui-40);
 }
 
 .footer .goog-te-gadget-simple {
@@ -974,12 +1076,6 @@ table td, table th {
   background-color: transparent;
 }
 
-.footer .goog-te-gadget-simple:hover {
-  color: var(--pharos-color-interactive-secondary);
-  background-color: var(--pharos-color-interactive-tertiary);
-  border-color: var(--pharos-color-interactive-tertiary);
-}
-
 .footer .goog-te-gadget-simple a.goog-te-menu-value {
   color: inherit;
 }
@@ -990,80 +1086,6 @@ table td, table th {
 
 .footer .goog-te-gadget-simple a.goog-te-menu-value span:not(:first-child) {
   display: none;
-}
-
-@media (min-width: 1160px) {
-  .footer-inner {
-    padding: 0;
-    width: 90%;
-  }
-}
-
-.footer-language-selector {
-  color: #006179;
-  display: inline-block;
-  font-weight: 300;
-}
-
-.row {
-  margin-left: -16px;
-  margin-right: -16px;
-}
-
-.column {
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-}
-
-.row.expanded {
-  clear: both;
-  min-height: 40px;
-}
-
-.row.expanded .left-col li {
-  display: inline-block;
-  padding-right: 12px;
-  margin-top: 15px;
-}
-
-@media (min-width: 768px) {
-  .column {
-    float: left;
-    width: 50%;
-  }
-  .column.right-col-wrapper {
-    width: 100%;
-    float: none;
-  }
-  .column.right-col-wrapper .right-col-1 {
-    width: 35%;
-  }
-  .column.right-col-wrapper .right-col-2 {
-    width: 65%;
-  }
-  .row.expanded .right-col {
-    width: 28.6%;
-    float: right;
-  }
-  .row.expanded .left-col {
-    width: 70%;
-  }
-}
-
-@media (min-width: 1205px) {
-  .column.left-col-wrapper {
-    width: 28%;
-    float: left;
-  }
-  .column.middle-col-wrapper {
-    width: 28%;
-    float: left;
-  }
-  .column.right-col-wrapper {
-    width: 44%;
-    float: left;
-  }
 }
 
 /***** Breadcrumbs *****/
