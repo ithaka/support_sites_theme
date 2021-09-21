@@ -4674,7 +4674,6 @@ html[lang|="ja"] .search-result-description em {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 25px;
-  color: $text_color;
 }
 
 #wayfless .field_container label.fieldname {
@@ -4703,6 +4702,7 @@ html[lang|="ja"] .search-result-description em {
   width: 215px;
   font-size: 16px;
   margin-top: 10px;
+  color: $text_color;
 }
 
 #wayfless div.field_container label.help {

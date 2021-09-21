@@ -13,7 +13,6 @@
     width: 100%;
     margin-top: 5px;
     margin-bottom: 25px;
-    color: $text_color;
   }
 
   .field_container label.fieldname {
@@ -42,6 +41,7 @@ div.field_container select {
   width: 215px;
   font-size: 16px;
   margin-top: 10px;
+  color: $text_color;
 }
 
 div.field_container label.help {
