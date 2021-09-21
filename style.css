@@ -315,6 +315,7 @@ body, button, input, optgroup, select, textarea, th {
   min-width: 190px;
   padding: 0 1.9286em;
   width: 100%;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
@@ -857,7 +858,6 @@ table td, table th {
 .footer {
   padding: 15px 0 15px;
   background-color: var(--pharos-color-text-10);
-  margin-top: 30px;
   /* Google Translate styles */
 }
 
