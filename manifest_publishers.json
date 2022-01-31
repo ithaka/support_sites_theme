@@ -276,7 +276,7 @@
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://publishersupport.zendesk.com//hc/en-us/requests/new?ticket_form_id=360003403994"
+      "value": "https://support.publishers.jstor.org/hc/en-us/requests/new?ticket_form_id=360003403994"
     },{
       "identifier": "login_link",
       "type": "text",
