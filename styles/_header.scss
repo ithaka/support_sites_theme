@@ -26,10 +26,11 @@ $header-height: 71px;
     top: 12px;
 
     img {
-      max-height: None;
+      max-height: 90px;
     }
   }
 }
+
 .user-nav {
   @include tablet { position: relative; }
   display: inline-block;

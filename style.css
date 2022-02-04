@@ -645,7 +645,7 @@ table td, table th {
 }
 
 .logo.logo-jstor img {
-  max-height: None;
+  max-height: 90px;
 }
 
 .user-nav {
