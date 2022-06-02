@@ -82,7 +82,7 @@
         {{/with}}
 
         <!--This prompts people to submit native Zendesk form-->
-        <div class="article-more-questions">
+        <div class="article-more-questions" data-sc="track-contact-submission">
           {{request_callout}}
         </div>
         <div class="article-return-to-top">
@@ -190,7 +190,7 @@
       {{/if}} --}}
     </article>
 
-    <section class="article-sidebar">
+    <section class="article-sidebar" data-sc="track-related-articles">
       <!--Check manifest for the below settings-->
       {{#if settings.show_related_articles}}
         {{related_articles}}
