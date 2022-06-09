@@ -50,16 +50,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="icon-menu" tabindex="0" role="button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}"></span>
     <nav class="user-nav" id="user-nav" role="navigation" aria-label="global navigation">
       <a href="{{settings.marketing_page}}">About {{settings.marketing_page_name}}</a>
-      <a class="current" href="/hc/en/">Support</a>
-      {{#is settings.product_name_text 'JSTOR'}}
+      {{#is settings.support_name_text 'JSTOR Publisher Support'}}
+      <a href="https://support.jstor.org/hc/en-us">Support</a>
+      <a class="current" href="https://support.publishers.jstor.org/hc/en-us">Publishers</a>
+      {{else}}
+      <a class="current" href="https://support.jstor.org/hc/en-us">Support</a>
       <a href="https://support.publishers.jstor.org/hc/en-us">Publishers</a>
       {{/is}}
       <a href="{{settings.contact_us_page}}">Contact Us</a>
       <a class="button" href="{{settings.login_link}}">Log in to {{settings.login_product_name}}</a>
       <!--{{link 'new_request' class='submit-a-request'}}-->
     </nav>
+
     {{#if signed_in}}
-    {{user_info}}
+      <div class="user-info dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          {{user_avatar class="user-avatar"}}
+          <span class="hide-on-mobile">
+            {{user_name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          {{link "my_activities" role="menuitem"}}
+          {{my_profile role="menuitem"}}
+          {{change_password role="menuitem"}}
+          {{link "sign_out" role="menuitem"}}
+        </div>
+      </div>
     {{/if}}
   </div>
 </header>

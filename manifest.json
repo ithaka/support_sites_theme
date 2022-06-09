@@ -1,7 +1,7 @@
 {
-  "name": "JSTOR Publisher Support Theme based on Zendesk",
+  "name": "JSTOR Support Theme based on Zendesk Copenhagen",
   "author": "Zendesk, ITHAKA",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
@@ -11,7 +11,7 @@
       "type": "color",
       "description": "brand_color_description",
       "label": "brand_color_label",
-      "value": "#006179"
+      "value": "#990000"
     }, {
       "identifier": "brand_text_color",
       "type": "color",
@@ -23,13 +23,13 @@
       "type": "color",
       "description": "text_color_description",
       "label": "text_color_label",
-      "value": "#333333"
+      "value": "#000000"
     }, {
       "identifier": "link_color",
       "type": "color",
       "description": "link_color_description",
       "label": "link_color_label",
-      "value": "#006179"
+      "value": "#000000"
     }, {
       "identifier": "background_color",
       "type": "color",
@@ -62,7 +62,7 @@
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
-      "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+      "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif" 
     }, {
       "identifier": "text_font",
       "type": "list",
@@ -82,7 +82,7 @@
         { "label": "Georgia", "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif" },
         { "label": "Helvetica", "value": "Helvetica, Arial, sans-serif" },
         { "label": "Helvetica Neue", "value": "'Helvetica Neue', Arial, Helvetica, sans-serif" },
-        { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },
+        { "label": "Impact", "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" },     
         { "label": "Lucida Grande", "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif" },
         { "label": "Trebuchet MS", "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" }
       ],
@@ -240,7 +240,7 @@
       "type": "text",
       "description": "google_tag_id_text",
       "label": "google_tag_id_text_label",
-      "value": "GTM-T6S6MHB"
+      "value": "GTM-NM4N39Z"
     },{
       "identifier": "marketing_page",
       "type": "text",
@@ -270,13 +270,13 @@
       "type": "text",
       "description": "support_name_text",
       "label": "support_name_text_label",
-      "value": "JSTOR Publisher Support"
+      "value": "JSTOR Support"
     },{
       "identifier": "contact_us_page",
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://publishersupport.zendesk.com//hc/en-us/requests/new?ticket_form_id=360003403994"
+      "value": "https://www.jstor.org/contact-us/"
     },{
       "identifier": "login_link",
       "type": "text",

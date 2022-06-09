@@ -55,7 +55,8 @@
       </section>
 
       <footer>
-        <div class="article-footer">
+        {{!-- comment out this below div to remove comments --}}
+        {{!-- {{<div class="article-footer">
           {{#if settings.show_article_sharing}}
             <div class="article-share">{{share}}</div>
           {{/if}}
@@ -67,7 +68,7 @@
               </a>
             {{/if}}
           {{/if}}
-        </div>
+        </div> --}}
         {{#with article}}
           <div class="article-votes">
             <span class="article-votes-question">{{t 'was_this_article_helpful'}}</span>
@@ -75,23 +76,21 @@
               {{vote 'up' role='radio' class='button article-vote article-vote-up'}}
               {{vote 'down' role='radio' class='button article-vote article-vote-down'}}
             </div>
-            <small class="article-votes-count">
+            <class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
-            </small>
           </div>
         {{/with}}
 
         <!--This prompts people to submit native Zendesk form-->
-        <!--<div class="article-more-questions">
+        <div class="article-more-questions" data-sc="track-contact-submission">
           {{request_callout}}
         </div>
-        -->
         <div class="article-return-to-top">
           <a href="#article-container">{{t 'return_to_top'}}<span class="icon-arrow-up"></span></a>
         </div>
       </footer>
-
-      {{#if settings.show_article_comments}}
+      {{!-- also comment this if block to remove comments --}}
+      {{!-- {{#if settings.show_article_comments}}
         <div class="article-comments" id="article-comments">
           <section class="comments">
             <header class="comment-overview">
@@ -188,10 +187,10 @@
             <p class="comment-callout">{{comment_callout}}</p>
           </section>
         </div>
-      {{/if}}
+      {{/if}} --}}
     </article>
 
-    <section class="article-sidebar">
+    <section class="article-sidebar" data-sc="track-related-articles">
       <!--Check manifest for the below settings-->
       {{#if settings.show_related_articles}}
         {{related_articles}}

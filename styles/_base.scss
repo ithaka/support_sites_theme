@@ -6,43 +6,47 @@
 body {
   background-color: $background_color;
   color: $text_color;
-  font-family: $text_font;
+  font-family: $base_font;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $heading_font;
+h2, h3, h4, h5, h6 {
+  font-family: $base_font !important;
   font-weight: $font-weight-bold;
   margin-top: 0;
 }
 
 h1 {
-  font-size: 36px;
-  line-height: .95;
+  font-size: 32px;
+  line-height: 36px;
   letter-spacing: -1.55px;
+  font-family: $header_font !important;
+  font-weight: $font-weight-bold;
+  margin-top: 0;
 }
+
 h2 {
-  font-family: $text_font;
-  font-size: 22px;
-  line-height: 30px;
+  font-family: $base_font !important;
+  font-size: 24px;
+  line-height: 28px;
   margin: 40px 0 0;
 }
 h3 {
-  font-family: $text_font;
+  font-family: $base_font !important;
   font-size: 18px;
-  margin: 30px 0 0;
+  margin: 20px 0 0;
 }
 
 h4 {
-  font-size: 16px;
-  font-family: $text_font;
+  font-size: $font-size-base;
+  font-family: $base_font !important;
 }
 
 small {
-  font-size: 80%;
+  font-size: $font-size-small;
   line-height: 1.1;
 }
 
@@ -54,6 +58,7 @@ a {
   &:active,
   &:focus {
     color: $visited-link-color;
+    text-decoration: none;
   }
 }
 
@@ -177,7 +182,7 @@ ul {
 }
 
 .caption-text {
-  font-size: 12px;
+  font-size: $font-size-micro;
   line-height: 1.4;
   padding: 1em 0 2rem;
 }
@@ -203,7 +208,7 @@ ul {
 
   a {
     font-weight: normal;
-    font-size: 14px;
+    font-size: $font-size-small;
     padding-left: 6px;
   }
 }
@@ -223,4 +228,18 @@ ul {
     background: $gray;
     border-color: $text_color;
   }
+}
+
+body, button, input, optgroup, select, textarea {
+  font-size: var(--pharos-font-size-base);
+  font-weight: var(--pharos-font-weight-regular);
+  letter-spacing: calc(var(--pharos-font-size-base)*-.02);
+  line-height: var(--pharos-line-height-medium);
+}
+
+body, button, input, optgroup, select, textarea, th {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--pharos-font-family-sans-serif);
+  text-rendering: optimizeLegibility;
 }

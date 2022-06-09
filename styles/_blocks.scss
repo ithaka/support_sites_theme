@@ -19,7 +19,7 @@
     }
 
     box-sizing: border-box;
-    color: $brand_color;
+    color: $text_color;
     display: flex;
     flex: 1 0 340px;
     flex-direction: column;
@@ -33,8 +33,8 @@
       text-decoration: none;
 
       h2 {
-      color: $brand-color;
-      text-decoration: underline;
+      color: $secondary_link_hover;
+      text-decoration: none;
       }
 
     }
@@ -59,7 +59,7 @@
       padding: 15px 20px;
     }
 
-    color: $brand_color;
+    color: $link_color;
     padding: 10px 0;
     text-decoration: none;
 
@@ -68,17 +68,22 @@
     &:active {
       text-decoration: none;
     }
+
+    a { 
+      text-decoration: underline;
+    }
   }
 
   &-item-title {
     margin-bottom: 0;
+    font-family: $base_font !important;
   }
 
   &-item-description {
-    font-size: $font-size-small;
-    font-weight: $font-weight-light;
+    font-size: $font-size-base;
     margin: 0;
     color: $secondary-link-color;
+    text-decoration: none;
     
     &:hover {
       text-decoration: none;
@@ -87,5 +92,6 @@
 
   &-item-description:not(:empty) {
     margin-top: 10px;
+    text-decoration: none;
   }
 }

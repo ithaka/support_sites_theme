@@ -58,7 +58,7 @@
 
     .icon-lock::before {
       content: "\1F512";
-      font-size: 20px;
+      font-size: $font-size-large;
       position: relative;
       left: -5px;
       vertical-align: baseline;
@@ -131,6 +131,10 @@
 
     li {
       margin-bottom: 14px;
+    }
+
+    h2 h3 h4 {
+      font-family: $base_font !important;
     }
   }
 
@@ -218,7 +222,7 @@
 
     &::before {
       @extend .icon;
-      font-size: 8px;
+      font-size: $font-size-base;
       margin-right: 10px;
 
       [dir="rtl"] & {
@@ -276,10 +280,6 @@
     a {
       display: block;
       padding: 20px 0;
-
-      &:hover,
-      &:focus {
-      }
     }
 
     .icon-arrow-up::before {
@@ -307,7 +307,7 @@
 
 .sidenav {
   &-item {
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     display: block;
     margin-bottom: 10px;
 
