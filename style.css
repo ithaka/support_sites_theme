@@ -3270,7 +3270,7 @@ table td, table th {
 
 @media (min-width: 1024px) {
   .my-activities-table th:first-child,
-  .my-activities-table td:first-child {
+.my-activities-table td:first-child {
     width: 500px;
   }
 }
@@ -3369,11 +3369,10 @@ table td, table th {
 
 @media (min-width: 768px) {
   .requests-table-toolbar .organization-subscribe,
-  .requests-table-toolbar .organization-unsubscribe {
+.requests-table-toolbar .organization-unsubscribe {
     margin-left: 10px;
   }
-  [dir="rtl"] .requests-table-toolbar .organization-subscribe, [dir="rtl"]
-  .requests-table-toolbar .organization-unsubscribe {
+  [dir="rtl"] .requests-table-toolbar .organization-subscribe, [dir="rtl"] .requests-table-toolbar .organization-unsubscribe {
     margin: 0 10px 0 0;
   }
 }
@@ -3837,6 +3836,8 @@ table td, table th {
 [class^="icon-"]::before,
 [class*=" icon-"]::before,
 .icon,
+.search-result-votes::before,
+.search-result-meta-count::before,
 .search::before,
 .recent-activity-item-comment span::before,
 .article-vote::before,
@@ -3845,9 +3846,7 @@ table td, table th {
 .vote-down::before,
 .actions .dropdown-toggle::before,
 .collapsible-nav-list li[aria-selected="true"]::after,
-.collapsible-sidebar-title::after,
-.search-result-votes::before,
-.search-result-meta-count::before {
+.collapsible-sidebar-title::after {
   font-family: "copenhagen-icons";
   font-style: normal;
   font-weight: normal;
