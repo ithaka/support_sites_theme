@@ -5,10 +5,10 @@
     {{search submit=false instant=settings.instant_search class='search search-full' placeholder='Search our help center'}}
   </div>
   {{#if promoted_articles}}
-      <p>
-        <strong class="popular-topics">Popular topics:</strong>
+      <p class="popular-topics">
+        <strong>Popular topics:</strong>
           {{#each promoted_articles}}
-                <a href='{{url}}' class="popular-topics a">{{title}}</a>
+                <a href='{{url}}' data-sc="popular-topics">{{title}}</a>
           {{/each}}
       </p>
     {{/if}}
