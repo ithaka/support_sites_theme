@@ -153,6 +153,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Hide specific form fields
+$('#request_subject').hide(); // hide the box you fill in
+$('.form-field label:contains("Subject")').hide(); // hide the text above the box
+$('#upload-dropzone').hide(); // hide the upload attachments button
+$('.form-field label:contains("Attachments")').hide();
+
+  
+//Fix Checkbox Alignment
+
+
+const checkboxes = document.querySelectorAll('.form-field.boolean.optional');
+const parentForm = checkboxes[0].parentNode;
+
+// create the new checkbox container
+const checkboxContainer = document.createElement("div");
+checkboxContainer.classList.add('checkbox-container');
+
+// insert the new container before the first checkbox
+parentForm.insertBefore(checkboxContainer, checkboxes[0]);
+
+checkboxContainer.style.display = 'flex';
+checkboxContainer.style.flexWrap = 'wrap';
+checkboxContainer.style.justifyContent = 'space-between';
+
+checkboxes.forEach((checkbox) => {
+// move the checkboxes to the new container
+checkboxContainer.appendChild(checkbox);
+
+checkbox.style.margin = '10px';
+checkbox.style.width = 'calc(20% - 20px)';
+});
+
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
   const seeAllTrigger = document.querySelector("#see-all-sections-trigger");
   const subsectionsList = document.querySelector(".section-list");
