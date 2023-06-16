@@ -152,38 +152,100 @@ document.addEventListener('DOMContentLoaded', function() {
       this.setAttribute('aria-expanded', !isExpanded);
     });
   });
+  //Prefill Subject with anem of selected form  
+var selected_form = $('#request_issue_type_select :selected').text();
+$('#request_subject').val(selected_form);
+  // Automatically check Agree to use cookies checkbox so it is an opt-out field
+window.onload = function() {
+  var checkbox = document.getElementById('request_custom_fields_15309688784535');
+  checkbox.checked = true;
+};
 
   // Hide specific form fields
 $('#request_subject').hide(); // hide the box you fill in
 $('.form-field label:contains("Subject")').hide(); // hide the text above the box
+  
 $('#upload-dropzone').hide(); // hide the upload attachments button
 $('.form-field label:contains("Attachments")').hide();
+  
+
+$('#request_custom_fields_15309856099735').hide(); // hide the box you fill in
+$('.form-field label:contains("Request Time")').hide(); // hide the text above the box
+
+$('#request_custom_fields_15309841262999').hide(); // hide the box you fill in
+$('.form-field label:contains("Referrer")').hide(); // hide the text above the box
+  
+$('#request_custom_fields_15309704240023').hide(); // hide the box you fill in
+$('.form-field label:contains("JSTOR Session ID")').hide(); // hide the text above the box
+  
+$('#request_custom_fields_15309728982935').hide(); // hide the box you fill in
+$('.form-field label:contains("Institution Name")').hide(); // hide the text above the box
+
+
+$('#request_custom_fields_15309762517015').hide(); // hide the box you fill in
+$('.form-field label:contains("myJSTOR User ID")').hide(); // hide the text above the box
+
+
+$('#request_custom_fields_15309775096983').hide(); // hide the box you fill in
+$('.form-field label:contains("myJSTOR Email")').hide(); // hide the text above the box
+  
+$('#request_custom_fields_15347647105943').hide(); // hide the box you fill in
+$('.form-field label:contains("User Agent")').hide(); // hide the text above the box
 
   
-//Fix Checkbox Alignment
-
-
-const checkboxes = document.querySelectorAll('.form-field.boolean.optional');
+// Select all checkbox elements on the page except for the excluded field
+const checkboxes = document.querySelectorAll('.form-field.boolean.optional:not(.request_custom_fields_15309688784535)');
 const parentForm = checkboxes[0].parentNode;
 
-// create the new checkbox container
+// Create a new container for the checkboxes
 const checkboxContainer = document.createElement("div");
 checkboxContainer.classList.add('checkbox-container');
 
-// insert the new container before the first checkbox
+// Insert the new container before the first checkbox
 parentForm.insertBefore(checkboxContainer, checkboxes[0]);
 
+// Apply CSS styles to the container for alignment
 checkboxContainer.style.display = 'flex';
 checkboxContainer.style.flexWrap = 'wrap';
 checkboxContainer.style.justifyContent = 'space-between';
 
+// Loop through each checkbox
 checkboxes.forEach((checkbox) => {
-// move the checkboxes to the new container
-checkboxContainer.appendChild(checkbox);
+  // Move the checkbox inside the new container
+  checkboxContainer.appendChild(checkbox);
 
-checkbox.style.margin = '10px';
-checkbox.style.width = 'calc(20% - 20px)';
+  // Apply CSS styles to the checkbox for alignment
+  checkbox.style.margin = '10px';
+  checkbox.style.width = 'calc(20% - 20px)';
 });
+//Allow more versitiltiy in populating fields with url paremeters from https://support.zendesk.com/hc/en-us/articles/4408839114522-Creating-pre-filled-ticket-forms comment by 
+//Mike Martello 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+
+  $(document).ready(function() {
+    var url = window.location.href;
+    if (url.includes('fields') == true) {
+      var queryDict = {};
+      location.search.substr(1).split("&").forEach(
+        function(item) {
+          queryDict[item.split("=")[0]] = item.split("=")[1];
+        }
+      );
+      try {
+        var fields = queryDict.fields.split("|");
+        fields.forEach(function(field) {
+          var thisField = field.split(",");
+          document.getElementById(thisField[0]).value = thisField[1];
+        });
+      }
+      catch (error) {
+        // Handle the error if fields or specific elements are not found
+        console.error(error);
+      }
+    }
+  });
+
+
 
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
   const seeAllTrigger = document.querySelector("#see-all-sections-trigger");
