@@ -153,12 +153,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+    //Prefill Subject with anem of selected form  
+  var selected_form = $('#request_issue_type_select :selected').text();
+  $('#request_subject').val(selected_form);
+
+
     // Hide specific form fields
   $('#request_subject').hide(); // hide the box you fill in
   $('.form-field label:contains("Subject")').hide(); // hide the text above the box
   
   $('#upload-dropzone').hide(); // hide the upload attachments button
   $('.form-field label:contains("Attachments")').hide();
+
+  $('request_collaborators_').hide(); // hide the upload attachments button
+  $('.form-field label:contains("CC")').hide();
 
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
   const seeAllTrigger = document.querySelector("#see-all-sections-trigger");
