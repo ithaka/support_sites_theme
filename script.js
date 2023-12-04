@@ -153,6 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+    // Hide specific form fields
+  $('#request_subject').hide(); // hide the box you fill in
+  $('.form-field label:contains("Subject")').hide(); // hide the text above the box
+  
+  $('#upload-dropzone').hide(); // hide the upload attachments button
+  $('.form-field label:contains("Attachments")').hide();
+
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
   const seeAllTrigger = document.querySelector("#see-all-sections-trigger");
   const subsectionsList = document.querySelector(".section-list");

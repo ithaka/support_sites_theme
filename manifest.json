@@ -276,7 +276,7 @@
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://support.contributors.jstor.org/hc/en-us/articles/360033529354"
+      "value": "https://support.contributors.jstor.org/hc/en-us/requests/new?ticket_form_id=18553578050839"
     },{
       "identifier": "login_link",
       "type": "text",
