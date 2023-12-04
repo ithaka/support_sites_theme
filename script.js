@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   $('#upload-dropzone').hide(); // hide the upload attachments button
   $('.form-field label:contains("Attachments")').hide();
 
-  $('request_collaborators_').hide(); // hide the upload attachments button
+  $('#request_collaborators_').hide(); // hide the CC button
   $('.form-field label:contains("CC")').hide();
 
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
