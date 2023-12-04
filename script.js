@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
   $('.form-field label:contains("Attachments")').hide();
 
   $('#request_collaborators_').hide(); // hide the CC button
-  $('#request_collaborators_').closest('ul').hide();
+  $('ul[data-hc-pills-container=true][tabindex=-1]').hide();
   $('.form-field label:contains("CC")').hide();
 
   // If a section has more than 6 subsections, we collapse the list, and show a trigger to display them all
