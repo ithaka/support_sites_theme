@@ -1,47 +1,51 @@
 // Variables
 
 // Colors
-$brand_color: #C9510D !default;
-$brand_text_color: #fff !default; //Color for text with an accent color background
-$text_color: #000 !default;
-$link_color: $brand_color !default;
-$secondary_link_color: #555555;
-$secondary_link_hover: #333333;
-$background_color: #fff !default;
+$brand_color: var(--pharos-color-interactive-primary) !default;
+$brand_text_color: var(--pharos-color-text-white) !default; //Color for text with an accent color background
+$text_color: var(--pharos-color-interactive-secondary) !default;
+$link_color: var(--pharos-color-interactive-secondary) !default;
+$secondary_link_color:var(--pharos-color-interactive-secondary);
+$secondary_link_hover:var(--pharos-color-hover-primary);
+$background_color: var(--pharos-color-ui-10) !default;
+$interactive_color: var(--pharos-color-interactive-tertiary);
 
-$visited-link-color: #993e0a;
-$hover-button-color: $visited-link-color;
+$visited-link-color: var(--pharos-color-hover-primary);
+$hover-button-color: var(--pharos-color-hover-primary);
 $secondary-text-color: zass-lighten($text_color, 20%);
 
 $primary-shade: zass-darken($background_color, 3%); //#f8f8f8 for the default background_color
 $secondary-shade: zass-darken($background_color, 5%); //#f2f2f2 for the default background_color
 
+$footer_text_color: var(--pharos-color-text-white);
+$footer_secondary_text_color: var(--pharos-color-text-10); 
+$footer_background_color: var(--pharos-color-text-10); //#1a1a19
+
 //added colors
 $hero-background: url($homepage_background_image); //file in assets
-$hero-text-color: $brand_text_color;
-$hero-link-text-color: $brand_text_color;
-$hero-link-text-hover: $brand_text_color;
-$dark-gray: #333333;
-$med-gray: #cccccc;
-$gray: #e8e8e8; //article anchor box, bottom of footer
-$lighter-gray: #f9f9f9;
-$alert-color: #ffefc3;
+$hero-text-color: var(--pharos-color-interactive-secondary);
+$hero-link-text-color: var(--pharos-color-interactive-secondary);
+$hero-link-text-hover: var(--pharos-color-interactive-primary);
+$dark-gray: var(--pharos-color-ui-50);
+$med-gray: var(--pharos-color-ui-40);
+$gray: var(--pharos-color-ui-30); //article anchor box, bottom of footer
+$lighter-gray: var(--pharos-color-ui-20);
+$alert-color: var(--pharos-color-ui-10);
 
 $font-size-bigger: 18px;
-$font-size-base: 16px;
-$font-size-navigation: 14px;
-$font-size-small: 14px;
+$font-size-base: var(--pharos-font-size-base); //16px
+$font-size-navigation: var(--pharos-font-size-small); //14px | 0.875rem
+$font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
 $font-size-smaller: 11px;
 
-$border-color: #000;
+$border-color: var(--pharos-color-overlay);
 
 $button-color: $brand_color;
-$vote-up: #6EB032;
-$vote-down: #E04A35;
-
-$input-font-size: 14px;
-$field-text-color: #333;
-$field-text-focus-color: #000;
+$vote-up: var(--pharos-color-feedback-success); // #268241
+$vote-down: var(--pharos-color-living-coral-base); // #fb4848
+$input-font-size: var(--pharos-font-size-small); //14px | 0.875rem
+$field-text-color: var(--pharos-color-text-10);
+$field-text-focus-color: var(--pharos-color-focus);
 
 // Breakpoints variables
 $tablet-width: 768px;
@@ -49,9 +53,15 @@ $desktop-width: 1024px;
 $max-width-container: 1160px;
 
 // Fonts
-$heading_font: 'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
-$text_font: Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
-$font-weight-base: 400;
+$header_font: var(--pharos-font-family-serif);
+$base_font: var(--pharos-font-family-sans-serif) !default;
+$footer_font: var(--pharos-font-family-sans-serif);
+$font-weight-base: var(--pharos-font-weight-regular); // 400
 $font-weight-light: 300;
 $font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight-bold: var(--pharos-font-weight-bold); // 700
+$font-size-micro:  var(--pharos-font-size-micro); //12px | 0.75rem
+$font-size-small: var(--pharos-font-size-small); //14px | 0.875rem
+$font-size-base: var(--pharos-font-size-base); // 16px | 1rem
+$font-size-large: var(--pharos-font-size-large); //20px | 1.25rem
+$font-size-xlarge: var(--pharos-font-size-xlarge); //24px | 1.5rem
