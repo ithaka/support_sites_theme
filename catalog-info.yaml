@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: support_sites_theme
+  description: Auto-generated catalog-info.yaml.
+  tags:
+  - scss
+  - css
+  - handlebars
+  - html
+  - javascript
+  - ruby
+  - shell
+  - batchfile
+spec:
+  type: unknown
+  owner: group:syseng
+  lifecycle: unknown
