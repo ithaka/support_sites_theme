@@ -181,4 +181,76 @@ document.addEventListener('DOMContentLoaded', function() {
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
   }
+  // Hide the ticket form dropdown UI, but keep the label visible
+  $('.form-field.request_ticket_form_id .nesty-input').hide(); // Hide the stylized dropdown
+  $('.form-field.request_ticket_form_id select').hide();        // Hide the actual select input
+  
+  // Update the label text
+  $('label[for="request_issue_type_select"]').text(
+    'Completing this form will send an email to Stewardship Support. You can expect a response within one to two business days.'
+  );
+  
+  // Run only if the selected ticket form ID matches our target
+  if ($('#request_issue_type_select').val() === '33981198237591') {
+
+    // Update the label text
+    $('label[for="request_issue_type_select"]').text(
+      'Thank you for migrating your content to JSTOR Digital Stewardship Services. Your feedback helps us improve our services. This short survey will take less than 2 minutes to complete.'
+    );
+
+    // Hide the Description field
+    $('.form-field.request_description').hide();
+
+    // Build and populate the description field just before form submission
+    $('form.request-form').on('submit', function (e) {
+      let descriptionParts = [];
+
+      // Manually add issue type
+      const issueTypeLabel = $('label[for="request_issue_type_select"]').text().trim();
+      const issueTypeValue = $('.form-field.request_ticket_form_id .nesty-input').text().trim();
+      descriptionParts.push(`${issueTypeLabel}: ${issueTypeValue}`);
+
+      // Manually add email address
+      const emailLabel = $('label[for="request_anonymous_requester_email"]').text().trim();
+      const emailValue = $('#request_anonymous_requester_email').val().trim();
+      descriptionParts.push(`${emailLabel}: ${emailValue}`);
+
+      // Loop through form fields, excluding already-handled ones
+      $('.form-field').each(function () {
+        const field = $(this);
+
+        if (
+          field.hasClass('request_ticket_form_id') ||
+          field.hasClass('request_anonymous_requester_email') ||
+          field.hasClass('request_subject')
+        ) {
+          return;
+        }
+
+        const label = field.find('label').first().text().trim();
+        const nestyInput = field.find('.nesty-input');
+
+        let value = '';
+
+        if (nestyInput.length) {
+          value = nestyInput.text().trim();
+        } else {
+          const textInput = field.find('input[type="text"], textarea').first();
+          if (textInput.length) {
+            value = textInput.val().trim();
+          }
+        }
+
+        if (label && value) {
+          descriptionParts.push(`${label}: ${value}`);
+        }
+      });
+
+      // Fill in the description field with the compiled summary
+      $('#request_description').val(descriptionParts.join('\n\n'));
+    });
+
+  }
+
+
 });
