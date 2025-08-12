@@ -246,13 +246,13 @@
       "type": "text",
       "description": "marketing_page_link",
       "label": "marketing_page_label",
-      "value": "https://about.jstor.org/l/share"
+      "value": "https://about.jstor.org/get-jstor/digital-stewardship"
     },{
       "identifier": "marketing_page_name",
       "type": "text",
       "description": "marketing_page_text",
       "label": "marketing_page_text_label",
-      "value": "JSTOR Shared Collections"
+      "value": "JSTOR Digital Stewardship Services"
     },{
       "identifier": "statuspage_component",
       "type": "text",
@@ -270,13 +270,13 @@
       "type": "text",
       "description": "support_name_text",
       "label": "support_name_text_label",
-      "value": "JSTOR Shared Collections Support"
+      "value": "JSTOR Digital Stewardship Services Support"
     },{
       "identifier": "contact_us_page",
       "type": "text",
       "description": "contact_us_page_url",
       "label": "contact_us_page_url",
-      "value": "https://support.contributors.jstor.org/hc/en-us/requests/new?ticket_form_id=18553578050839"
+      "value": "https://support.stewardship.jstor.org/hc/en-us/requests/new?ticket_form_id=18553578050839"
     },{
       "identifier": "login_link",
       "type": "text",
