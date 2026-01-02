@@ -259,9 +259,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
   }
-    // Hide the ticket form dropdown UI, but keep the label visible
-  $('.form-field.request_ticket_form_id .nesty-input').hide(); // Hide the stylized dropdown
-  $('.form-field.request_ticket_form_id select').hide();  // Hide the actual select input
 });
 
 
