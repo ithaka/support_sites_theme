@@ -402,6 +402,18 @@ table td, table th {
 }
 
 /***** Forms *****/
+
+.table-sticky-header th {
+  position: sticky;
+  top: 0;
+  background-color: var(--pharos-color-marble-gray-94);
+  border-bottom: 1px solid var(--pharos-color-ui-40);
+}
+
+.table-highlight tr:hover{
+  background-color: var(--pharos-color-marble-gray-97);
+}
+
 .contactusheader {
   color: #900;
 }
@@ -1884,6 +1896,27 @@ table td, table th {
 
 .article-content h2 h3 h4 {
   font-family: var(--pharos-font-family-sans-serif) !important;
+}
+
+.article-callout-info {
+  background: var(--pharos-alert-color-background-info);
+  border: 1px solid var(--pharos-alert-color-border-info);
+  border-radius: var(--pharos-radius-base-standard);
+  padding: var(--pharos-spacing-1-x);
+}
+
+.article-callout-tip {
+  background: var(--pharos-alert-color-background-success);
+  border: 1px solid var(--pharos-alert-color-border-success);
+  border-radius: var(--pharos-radius-base-standard);
+  padding: var(--pharos-spacing-1-x);
+}
+
+.article-callout-warning {
+  background: var(--pharos-alert-color-background-warning);
+  border: 1px solid var(--pharos-alert-color-border-warning);
+  border-radius: var(--pharos-radius-base-standard);
+  padding: var(--pharos-spacing-1-x);
 }
 
 .article-footer {
