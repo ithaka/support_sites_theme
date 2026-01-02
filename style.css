@@ -578,6 +578,11 @@ table td, table th {
   background-size: 16px 16px;
 }
 
+.form-field.request_ticket_form_id > .nesty-input,
+.form-field.request_ticket_form_id > select {
+  display: none !important;
+}
+
 .form footer {
   margin-top: 40px;
   padding-top: 30px;
