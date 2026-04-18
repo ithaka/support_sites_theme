@@ -158,7 +158,9 @@ $('#request_subject').val(selected_form);
   // Automatically check Agree to use cookies checkbox so it is an opt-out field
 window.onload = function() {
   var checkbox = document.getElementById('request_custom_fields_15309688784535');
-  checkbox.checked = true;
+  if (checkbox) {
+    checkbox.checked = true;
+  }
 };
 
   // Hide specific form fields
@@ -195,29 +197,31 @@ $('.form-field label:contains("User Agent")').hide(); // hide the text above the
   
 // Select all checkbox elements on the page except for the excluded field
 const checkboxes = document.querySelectorAll('.form-field.boolean.optional:not(.request_custom_fields_15309688784535)');
-const parentForm = checkboxes[0].parentNode;
+if (checkboxes.length > 0) {
+  const parentForm = checkboxes[0].parentNode;
 
-// Create a new container for the checkboxes
-const checkboxContainer = document.createElement("div");
-checkboxContainer.classList.add('checkbox-container');
+  // Create a new container for the checkboxes
+  const checkboxContainer = document.createElement("div");
+  checkboxContainer.classList.add('checkbox-container');
 
-// Insert the new container before the first checkbox
-parentForm.insertBefore(checkboxContainer, checkboxes[0]);
+  // Insert the new container before the first checkbox
+  parentForm.insertBefore(checkboxContainer, checkboxes[0]);
 
-// Apply CSS styles to the container for alignment
-checkboxContainer.style.display = 'flex';
-checkboxContainer.style.flexWrap = 'wrap';
-checkboxContainer.style.justifyContent = 'space-between';
+  // Apply CSS styles to the container for alignment
+  checkboxContainer.style.display = 'flex';
+  checkboxContainer.style.flexWrap = 'wrap';
+  checkboxContainer.style.justifyContent = 'space-between';
 
-// Loop through each checkbox
-checkboxes.forEach((checkbox) => {
-  // Move the checkbox inside the new container
-  checkboxContainer.appendChild(checkbox);
+  // Loop through each checkbox
+  checkboxes.forEach((checkbox) => {
+    // Move the checkbox inside the new container
+    checkboxContainer.appendChild(checkbox);
 
-  // Apply CSS styles to the checkbox for alignment
-  checkbox.style.margin = '10px';
-  checkbox.style.width = 'calc(20% - 20px)';
-});
+    // Apply CSS styles to the checkbox for alignment
+    checkbox.style.margin = '10px';
+    checkbox.style.width = 'calc(20% - 20px)';
+  });
+}
 //Allow more versitiltiy in populating fields with url paremeters from https://support.zendesk.com/hc/en-us/articles/4408839114522-Creating-pre-filled-ticket-forms comment by 
 //Mike Martello 
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -261,4 +265,670 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
   }
 });
 
+/* PDF_ACCESSIBILITY_FORM_START */
+
+(function pdfAccessibilityRequestForm() {
+  const TARGET_FORM_ID = '39817828224791';
+  const ISSUE_FIELD_IDS = [39817806847255, 39817773526295, 39817789561367, 39817836499863, 39817836508311, 39817836530327, 39817789610135, 39817828190359, 39817789634839, 39817836571543];
+  const IID_REGEX = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$");
+  const SELECTORS = {"stable": "input[name=\"request[custom_fields][39817789530647]\"]", "customName": "input[name=\"request[custom_fields][39817760991895]\"]", "iid": "input[name=\"request[custom_fields][39817789539607]\"]", "description": "textarea[name=\"request[description]\"]", "subject": "input[name=\"request[subject]\"]", "builtinEmail": "input[name=\"request[anonymous_requester_email]\"]", "builtinName": "input[name=\"request[name]\"]", "ticketForm": "input[name=\"request[ticket_form_id]\"]"};
+  const CONSTANT_SUBJECT = 'Report PDF accessibility issues';
+
+  function checkboxSelector(fieldId) {
+    return `input[type="checkbox"][name="request[custom_fields][${fieldId}]"]`;
+  }
+
+  function getUrlParameter(name) {
+    const fullQueryString = window.location.href.split('?')[1];
+    if (!fullQueryString) return null;
+    const chunks = fullQueryString.split('/');
+    for (const chunk of chunks) {
+      try {
+        const params = new URLSearchParams(chunk);
+        if (params.has(name)) return params.get(name);
+      } catch {}
+      const match = chunk.match(new RegExp('(?:^|[?&])' + name + '=([^&/]+)', 'i'));
+      if (match) return match[1];
+    }
+    return null;
+  }
+
+  function currentFormId() {
+    try {
+      const fromQuery = new URLSearchParams(window.location.search).get('ticket_form_id');
+      if (fromQuery) return String(fromQuery);
+    } catch {}
+    const hidden = document.querySelector(SELECTORS.ticketForm);
+    return hidden && hidden.value ? String(hidden.value) : '';
+  }
+
+  function isTargetForm() {
+    return currentFormId() === TARGET_FORM_ID
+      || !!document.querySelector(SELECTORS.stable)
+      || !!document.querySelector(SELECTORS.iid);
+  }
+
+  function requestForm() {
+    return document.getElementById('new_request')
+      || document.querySelector('#new-request-form form')
+      || document.querySelector('form.request-form');
+  }
+
+  function closestField(el) {
+    if (!el) return null;
+    return el.closest('.form-field')
+      || el.closest('[data-garden-id="forms.field"]')
+      || el.closest('[data-garden-id="dropdowns.combobox.field"]')
+      || el.closest('[data-garden-id="forms.fieldset"]')
+      || el.parentElement;
+  }
+
+  function hideEl(el) {
+    if (!el) return;
+    el.style.display = 'none';
+    el.style.visibility = 'hidden';
+    el.setAttribute('aria-hidden', 'true');
+  }
+
+  function setValue(selector, value) {
+    if (value == null) return;
+    const input = document.querySelector(selector);
+    if (!input) return;
+    if (input.value === value) return;
+    input.value = value;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  function normalizeStableUrl(value) {
+    if (!value) return '';
+    const trimmed = decodeURIComponent(String(value)).trim();
+    if (!trimmed) return '';
+    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    const normalized = trimmed.replace(/^\/+/, '').replace(/^stable\//i, '');
+    const communityParam = (getUrlParameter('community') || '').trim().toLowerCase();
+    const isCommunity = communityParam === 'true' || communityParam === '1';
+    return isCommunity
+      ? 'https://www.jstor.org/stable/community.' + normalized
+      : 'https://www.jstor.org/stable/' + normalized;
+  }
+
+  function setFieldLabel(input, labelText) {
+    const field = closestField(input);
+    if (!field) return;
+    const label = field.querySelector('label, [data-garden-id="forms.label"], [data-garden-id="dropdowns.combobox.label"]');
+    if (label) label.textContent = labelText;
+  }
+
+  function setFieldDescription(input, text) {
+    const field = closestField(input);
+    if (!field) return;
+    let desc = field.querySelector('.pdf-a11y-field-description');
+    if (!desc) {
+      desc = document.createElement('div');
+      desc.className = 'pdf-a11y-field-description';
+      const label = field.querySelector('label, [data-garden-id="forms.label"], [data-garden-id="dropdowns.combobox.label"]');
+      if (label && label.parentNode) label.parentNode.insertAdjacentElement('afterend', desc);
+      else field.insertBefore(desc, field.firstChild);
+    }
+    desc.textContent = text;
+  }
+
+  function ensureIntro() {
+    const form = requestForm();
+    const mount = form && (form.closest('.form') || form.parentElement);
+    if (!form || !mount || mount.querySelector('.pdf-a11y-intro')) return;
+    const intro = document.createElement('section');
+    intro.className = 'pdf-a11y-intro';
+    const parts = [];
+    if (!document.querySelector('.contactusheader')) {
+      parts.push('<div class="pdf-a11y-kicker">CONTACT US</div>');
+    }
+    parts.push(
+      '<h2>Report PDF accessibility issues</h2>',
+      '<p>If you are experiencing accessibility issues with a JSTOR PDF, use this form to let us know. Our team will review your report and update the document as needed.</p>',
+      '<p class="pdf-a11y-required">* All fields are required</p>'
+    );
+    intro.innerHTML = parts.join('');
+    mount.insertBefore(intro, form);
+  }
+
+  function ensureWhatHappensNext() {
+    const form = requestForm();
+    if (!form || form.querySelector('.pdf-a11y-what-next')) return;
+    const block = document.createElement('div');
+    block.className = 'pdf-a11y-what-next';
+    block.innerHTML = '<strong>What happens next:</strong> Your report will be reviewed by our team and we will work to resolve the issues you identified. We will email you the updated file and reach out if we need clarification. The improved version will also be available at the same download link in X days once updates are complete.';
+    const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+    const submitMount = submitButton && (
+      submitButton.closest('.form-footer')
+      || submitButton.closest('.request-form-footer')
+      || submitButton.closest('.form-field')
+      || submitButton
+    );
+    if (submitMount && submitMount.parentNode) {
+      submitMount.parentNode.insertBefore(block, submitMount);
+    } else {
+      form.appendChild(block);
+    }
+  }
+
+  function ensureLinkError() {
+    const form = requestForm();
+    if (!form) return null;
+    let error = form.querySelector('.pdf-a11y-link-error');
+    if (!error) {
+      error = document.createElement('div');
+      error.className = 'pdf-a11y-link-error';
+      error.setAttribute('role', 'alert');
+      error.hidden = true;
+      error.textContent = 'This request link is invalid or incomplete.';
+      form.insertBefore(error, form.firstChild);
+    }
+    return error;
+  }
+
+  function ensureIssueGroup() {
+    const firstIssue = document.querySelector(checkboxSelector(ISSUE_FIELD_IDS[0]));
+    const firstField = closestField(firstIssue);
+    if (!firstField) return;
+    let group = document.querySelector('.pdf-a11y-issue-group');
+    if (!group) {
+      group = document.createElement('div');
+      group.className = 'pdf-a11y-issue-group';
+      group.innerHTML = '<div class="pdf-a11y-issue-heading">WHAT ACCESSIBILITY ISSUES DID YOU ENCOUNTER? (SELECT ALL THAT APPLY)</div><div class="pdf-a11y-issue-error" role="alert" hidden>Select at least one issue.</div>';
+      firstField.parentNode.insertBefore(group, firstField);
+    }
+    ISSUE_FIELD_IDS.forEach((fieldId) => {
+      const input = document.querySelector(checkboxSelector(fieldId));
+      const field = closestField(input);
+      if (!field) return;
+      field.classList.add('pdf-a11y-issue-field');
+      if (field.previousElementSibling !== group) group.parentNode.insertBefore(field, group.nextSibling);
+    });
+  }
+
+  function moveFieldAfter(input, referenceField) {
+    const field = closestField(input);
+    if (!field || !referenceField || !referenceField.parentNode) return referenceField;
+    referenceField.parentNode.insertBefore(field, referenceField.nextSibling);
+    return field;
+  }
+
+  function configureBuiltinRequesterFields() {
+    const description = document.querySelector(SELECTORS.description);
+    const descriptionField = closestField(description);
+    let anchor = descriptionField;
+
+    const builtinEmail = document.querySelector(SELECTORS.builtinEmail);
+    if (builtinEmail) {
+      setFieldLabel(builtinEmail, 'YOUR EMAIL ADDRESS');
+      setFieldDescription(builtinEmail, 'We will use this to contact you about your report.');
+      anchor = moveFieldAfter(builtinEmail, anchor) || anchor;
+    }
+
+    const builtinName = document.querySelector(SELECTORS.builtinName);
+    if (builtinName) {
+      setFieldLabel(builtinName, 'YOUR NAME');
+      setFieldDescription(builtinName, 'We will use this to contact you about your report.');
+      anchor = moveFieldAfter(builtinName, anchor) || anchor;
+      const customNameField = closestField(document.querySelector(SELECTORS.customName));
+      if (customNameField) hideEl(customNameField);
+      return;
+    }
+
+    const customName = document.querySelector(SELECTORS.customName);
+    if (customName) {
+      setFieldLabel(customName, 'YOUR NAME');
+      setFieldDescription(customName, 'We will use this to contact you about your report.');
+      moveFieldAfter(customName, anchor);
+    }
+  }
+
+  function hideAttachmentsField() {
+    const form = requestForm();
+    if (!form) return;
+    const fileInputs = form.querySelectorAll('input[type="file"]');
+    fileInputs.forEach((input) => hideEl(closestField(input)));
+    const attachmentLike = Array.from(form.querySelectorAll('*')).filter((node) => {
+      const text = (node.textContent || '').trim();
+      return /^attachments?$/i.test(text) || /drag.*drop/i.test(text) || /upload file/i.test(text);
+    });
+    attachmentLike.forEach((node) => hideEl(closestField(node) || node));
+  }
+
+  function iidValueStatus() {
+    const iid = document.querySelector(SELECTORS.iid);
+    const value = iid && iid.value != null ? String(iid.value) : '';
+    if (!value) return { valid: false, reason: 'missing' };
+    const valid = IID_REGEX.test(value);
+    return { valid, reason: valid ? '' : 'invalid' };
+  }
+
+  function validateIid() {
+    const error = ensureLinkError();
+    const status = iidValueStatus();
+    if (error) error.hidden = status.valid;
+    return status.valid;
+  }
+
+  function decorateFields() {
+    const subject = document.querySelector(SELECTORS.subject);
+    if (subject) {
+      setValue(SELECTORS.subject, CONSTANT_SUBJECT);
+      hideEl(closestField(subject));
+    }
+
+    const iid = document.querySelector(SELECTORS.iid);
+    if (iid) {
+      hideEl(closestField(iid));
+      const password = getUrlParameter('password');
+      if (password) setValue(SELECTORS.iid, decodeURIComponent(password));
+    }
+
+    const stable = document.querySelector(SELECTORS.stable);
+    if (stable) {
+      setFieldLabel(stable, 'ITEM LINK (STABLE URL)');
+      setFieldDescription(stable, 'You can copy this from the PDF cover page. It usually looks like: https://www.jstor.org/stable/...');
+      const stableParam = getUrlParameter('stable');
+      const stableValue = normalizeStableUrl(stableParam);
+      if (stableValue) setValue(SELECTORS.stable, stableValue);
+    }
+
+    const description = document.querySelector(SELECTORS.description);
+    if (description) {
+      setFieldLabel(description, 'DESCRIBE THE SPECIFIC PROBLEMS YOU ENCOUNTERED');
+      setFieldDescription(description, 'Please include page numbers and describe what you were trying to do when you experienced the issue.');
+      description.placeholder = 'Example: The table on page 3 does not have headers and I cannot access it with my screen reader.';
+    }
+
+    configureBuiltinRequesterFields();
+    hideAttachmentsField();
+    validateIid();
+  }
+
+  function hideFormSelectorAndGenericCopy() {
+    const legacySelect = document.getElementById('request_issue_type_select');
+    if (legacySelect) hideEl(closestField(legacySelect));
+    const genericLines = Array.from(document.querySelectorAll('.request-main *')).filter((node) => {
+      const text = (node.textContent || '').trim();
+      return text === 'Fields marked with an asterisk (*) are required.' || text === 'Submit a request';
+    });
+    genericLines.forEach(hideEl);
+  }
+
+  function validateIssues(form) {
+    const checked = ISSUE_FIELD_IDS.some((fieldId) => {
+      const input = document.querySelector(checkboxSelector(fieldId));
+      return !!(input && input.checked);
+    });
+    const error = document.querySelector('.pdf-a11y-issue-error');
+    if (error) error.hidden = checked;
+    return checked;
+  }
+
+  function bindValidation() {
+    const form = requestForm();
+    if (!form || form.dataset.pdfA11yBound === 'true') return;
+    form.dataset.pdfA11yBound = 'true';
+    form.addEventListener('submit', function (event) {
+      const iidValid = validateIid();
+      const issuesValid = validateIssues(form);
+      if (!iidValid || !issuesValid) {
+        event.preventDefault();
+        event.stopPropagation();
+        const iidError = document.querySelector('.pdf-a11y-link-error');
+        if (iidError && !iidError.hidden) {
+          iidError.scrollIntoView({ block: 'center', behavior: 'smooth' });
+          return;
+        }
+        const heading = document.querySelector('.pdf-a11y-issue-heading');
+        if (heading) heading.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+    }, true);
+    form.addEventListener('change', function () {
+      validateIssues(form);
+      validateIid();
+    });
+  }
+
+  function applyDecorations() {
+    const active = isTargetForm();
+    document.body.classList.toggle('pdf-a11y-form-active', active);
+    if (!active) return;
+    ensureIntro();
+    ensureWhatHappensNext();
+    ensureIssueGroup();
+    decorateFields();
+    hideFormSelectorAndGenericCopy();
+    bindValidation();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(applyDecorations, 0);
+    });
+  } else {
+    setTimeout(applyDecorations, 0);
+  }
+
+  const mount = requestForm() || document.querySelector('.form-container') || document.querySelector('.form');
+  if (mount && window.MutationObserver) {
+    const mo = new MutationObserver(function () {
+      clearTimeout(mo.__t);
+      mo.__t = setTimeout(applyDecorations, 75);
+    });
+    mo.observe(mount, { childList: true, subtree: true, attributes: true });
+  }
+
+  document.addEventListener('change', function (event) {
+    const target = event.target;
+    if (target && (target.id === 'request_issue_type_select' || target.name === 'request[ticket_form_id]')) {
+      setTimeout(applyDecorations, 0);
+    }
+  });
+})();
+/* PDF_ACCESSIBILITY_FORM_END */
+
+/* IMAGE_DESCRIPTION_FEEDBACK_FORM_START */
+
+(function imageDescriptionFeedbackForm() {
+  const TARGET_FORM_ID = '39817789826327';
+  const ISSUE_FIELD_IDS = [39817836603927, 39817773665047, 39817773686935, 39817828289047, 39817807034775, 39817773790231, 39817807084055, 39817789808023, 39817789818135];
+  const SELECTORS = {"stable": "input[name=\"request[custom_fields][39817821517207]\"]", "customName": "input[name=\"request[custom_fields][39817836596247]\"]", "description": "textarea[name=\"request[description]\"]", "subject": "input[name=\"request[subject]\"]", "builtinEmail": "input[name=\"request[anonymous_requester_email]\"]", "builtinName": "input[name=\"request[name]\"]", "ticketForm": "input[name=\"request[ticket_form_id]\"]"};
+  const CONSTANT_SUBJECT = "Help us improve this image description";
+
+  function checkboxSelector(fieldId) {
+    return `input[type="checkbox"][name="request[custom_fields][${fieldId}]"]`;
+  }
+
+  function getUrlParameter(name) {
+    const fullQueryString = window.location.href.split('?')[1];
+    if (!fullQueryString) return null;
+    const chunks = fullQueryString.split('/');
+    for (const chunk of chunks) {
+      try {
+        const params = new URLSearchParams(chunk);
+        if (params.has(name)) return params.get(name);
+      } catch {}
+      const match = chunk.match(new RegExp('(?:^|[?&])' + name + '=([^&/]+)', 'i'));
+      if (match) return match[1];
+    }
+    return null;
+  }
+
+  function currentFormId() {
+    try {
+      const fromQuery = new URLSearchParams(window.location.search).get('ticket_form_id');
+      if (fromQuery) return String(fromQuery);
+    } catch {}
+    const hidden = document.querySelector(SELECTORS.ticketForm);
+    return hidden && hidden.value ? String(hidden.value) : '';
+  }
+
+  function isTargetForm() {
+    return currentFormId() === TARGET_FORM_ID || !!document.querySelector(SELECTORS.stable);
+  }
+
+  function requestForm() {
+    return document.getElementById('new_request')
+      || document.querySelector('#new-request-form form')
+      || document.querySelector('form.request-form');
+  }
+
+  function closestField(el) {
+    if (!el) return null;
+    return el.closest('.form-field')
+      || el.closest('[data-garden-id="forms.field"]')
+      || el.closest('[data-garden-id="dropdowns.combobox.field"]')
+      || el.closest('[data-garden-id="forms.fieldset"]')
+      || el.parentElement;
+  }
+
+  function hideEl(el) {
+    if (!el) return;
+    el.style.display = 'none';
+    el.style.visibility = 'hidden';
+    el.setAttribute('aria-hidden', 'true');
+  }
+
+  function setValue(selector, value) {
+    if (value == null) return;
+    const input = document.querySelector(selector);
+    if (!input) return;
+    if (input.value === value) return;
+    input.value = value;
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    input.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  function normalizeStableUrl(value) {
+    if (!value) return '';
+    const trimmed = decodeURIComponent(String(value)).trim();
+    if (!trimmed) return '';
+    if (/^https?:\/\//i.test(trimmed)) return trimmed;
+    let normalized = trimmed
+      .replace(/^\/+/, '')
+      .replace(/^stable\//i, '')
+      .replace(/^community\./i, '');
+    normalized = normalized.replace(/^www\.jstor\.org\/stable\//i, '');
+    return 'https://www.jstor.org/stable/' + (
+      /^community\./i.test(normalized) ? normalized : 'community.' + normalized
+    );
+  }
+
+  function setFieldLabel(input, labelText) {
+    const field = closestField(input);
+    if (!field) return;
+    const label = field.querySelector('label, [data-garden-id="forms.label"], [data-garden-id="dropdowns.combobox.label"]');
+    if (label) label.textContent = labelText;
+  }
+
+  function setFieldDescription(input, text) {
+    const field = closestField(input);
+    if (!field) return;
+    let desc = field.querySelector('.image-description-field-description');
+    if (!desc) {
+      desc = document.createElement('div');
+      desc.className = 'image-description-field-description';
+      const label = field.querySelector('label, [data-garden-id="forms.label"], [data-garden-id="dropdowns.combobox.label"]');
+      if (label && label.parentNode) label.parentNode.insertAdjacentElement('afterend', desc);
+      else field.insertBefore(desc, field.firstChild);
+    }
+    desc.textContent = text;
+  }
+
+  function ensureIntro() {
+    const form = requestForm();
+    const mount = form && (form.closest('.form') || form.parentElement);
+    if (!form || !mount || mount.querySelector('.image-description-intro')) return;
+    const intro = document.createElement('section');
+    intro.className = 'image-description-intro';
+    const parts = [];
+    if (!document.querySelector('.contactusheader')) {
+      parts.push('<div class="image-description-kicker">CONTACT US</div>');
+    }
+    parts.push(
+      '<h2>Help us improve this image description</h2>',
+      '<p>The image description was generated with AI and may contain inaccuracies. If the description doesn\'t match the image or misses important information, please describe the issue.</p>',
+      '<p class="image-description-required">* All fields are required</p>'
+    );
+    intro.innerHTML = parts.join('');
+    mount.insertBefore(intro, form);
+  }
+
+  function ensureIssueGroup() {
+    const firstIssue = document.querySelector(checkboxSelector(ISSUE_FIELD_IDS[0]));
+    const firstField = closestField(firstIssue);
+    if (!firstField) return;
+    let group = document.querySelector('.image-description-issue-group');
+    if (!group) {
+      group = document.createElement('div');
+      group.className = 'image-description-issue-group';
+      group.innerHTML = '<div class="image-description-issue-heading">WHAT&#8217;S WRONG WITH THIS ALTERNATIVE TEXT? (SELECT ALL THAT APPLY)*</div><div class="image-description-issue-error" role="alert" hidden>Select at least one issue.</div>';
+      firstField.parentNode.insertBefore(group, firstField);
+    }
+
+    let anchor = group;
+    ISSUE_FIELD_IDS.forEach((fieldId) => {
+      const input = document.querySelector(checkboxSelector(fieldId));
+      const field = closestField(input);
+      if (!field) return;
+      field.classList.add('image-description-issue-field');
+      if (anchor.parentNode && anchor.nextSibling !== field) {
+        anchor.parentNode.insertBefore(field, anchor.nextSibling);
+      }
+      anchor = field;
+    });
+  }
+
+  function moveFieldAfter(input, referenceField) {
+    const field = closestField(input);
+    if (!field || !referenceField || !referenceField.parentNode) return referenceField;
+    referenceField.parentNode.insertBefore(field, referenceField.nextSibling);
+    return field;
+  }
+
+  function configureBuiltinRequesterFields() {
+    const description = document.querySelector(SELECTORS.description);
+    const descriptionField = closestField(description);
+    let anchor = descriptionField;
+
+    const builtinEmail = document.querySelector(SELECTORS.builtinEmail);
+    if (builtinEmail) {
+      setFieldLabel(builtinEmail, 'YOUR EMAIL ADDRESS');
+      setFieldDescription(builtinEmail, 'We will use this to contact you about your report.');
+      anchor = moveFieldAfter(builtinEmail, anchor) || anchor;
+    }
+
+    const builtinName = document.querySelector(SELECTORS.builtinName);
+    if (builtinName) {
+      setFieldLabel(builtinName, 'YOUR NAME');
+      setFieldDescription(builtinName, 'We will use this to contact you about your report.');
+      anchor = moveFieldAfter(builtinName, anchor) || anchor;
+      const customNameField = closestField(document.querySelector(SELECTORS.customName));
+      if (customNameField) hideEl(customNameField);
+      return;
+    }
+
+    const customName = document.querySelector(SELECTORS.customName);
+    if (customName) {
+      setFieldLabel(customName, 'YOUR NAME');
+      setFieldDescription(customName, 'We will use this to contact you about your report.');
+      moveFieldAfter(customName, anchor);
+    }
+  }
+
+  function hideAttachmentsField() {
+    const form = requestForm();
+    if (!form) return;
+    const fileInputs = form.querySelectorAll('input[type="file"]');
+    fileInputs.forEach((input) => hideEl(closestField(input)));
+    const attachmentLike = Array.from(form.querySelectorAll('*')).filter((node) => {
+      const text = (node.textContent || '').trim();
+      return /^attachments?$/i.test(text) || /drag.*drop/i.test(text) || /upload file/i.test(text);
+    });
+    attachmentLike.forEach((node) => hideEl(closestField(node) || node));
+  }
+
+  function decorateFields() {
+    const subject = document.querySelector(SELECTORS.subject);
+    if (subject) {
+      setValue(SELECTORS.subject, CONSTANT_SUBJECT);
+      hideEl(closestField(subject));
+    }
+
+    const stable = document.querySelector(SELECTORS.stable);
+    if (stable) {
+      setFieldLabel(stable, 'ITEM LINK (STABLE URL)');
+      setFieldDescription(stable, 'You can copy the URL of the image. It usually looks like: https://www.jstor.org/stable/...');
+      const stableParam = getUrlParameter('stable');
+      const stableValue = normalizeStableUrl(stableParam);
+      if (stableValue) setValue(SELECTORS.stable, stableValue);
+    }
+
+    const description = document.querySelector(SELECTORS.description);
+    if (description) {
+      setFieldLabel(description, 'HOW CAN WE IMPROVE THIS DESCRIPTION?*');
+      description.placeholder = 'Describe what\'s incorrect, missing, or misleading.';
+    }
+
+    configureBuiltinRequesterFields();
+    hideAttachmentsField();
+  }
+
+  function hideFormSelectorAndGenericCopy() {
+    const legacySelect = document.getElementById('request_issue_type_select');
+    if (legacySelect) hideEl(closestField(legacySelect));
+    const genericLines = Array.from(document.querySelectorAll('.request-main *')).filter((node) => {
+      const text = (node.textContent || '').trim();
+      return text === 'Fields marked with an asterisk (*) are required.' || text === 'Submit a request';
+    });
+    genericLines.forEach(hideEl);
+  }
+
+  function validateIssues() {
+    const checked = ISSUE_FIELD_IDS.some((fieldId) => {
+      const input = document.querySelector(checkboxSelector(fieldId));
+      return !!(input && input.checked);
+    });
+    const error = document.querySelector('.image-description-issue-error');
+    if (error) error.hidden = checked;
+    return checked;
+  }
+
+  function bindValidation() {
+    const form = requestForm();
+    if (!form || form.dataset.imageDescriptionBound === 'true') return;
+    form.dataset.imageDescriptionBound = 'true';
+    form.addEventListener('submit', function (event) {
+      const issuesValid = validateIssues();
+      if (!issuesValid) {
+        event.preventDefault();
+        event.stopPropagation();
+        const heading = document.querySelector('.image-description-issue-heading');
+        if (heading) heading.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      }
+    }, true);
+    form.addEventListener('change', function () {
+      validateIssues();
+    });
+  }
+
+  function applyDecorations() {
+    const active = isTargetForm();
+    document.body.classList.toggle('image-description-form-active', active);
+    if (!active) return;
+    ensureIntro();
+    ensureIssueGroup();
+    decorateFields();
+    hideFormSelectorAndGenericCopy();
+    bindValidation();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(applyDecorations, 0);
+    });
+  } else {
+    setTimeout(applyDecorations, 0);
+  }
+
+  const mount = requestForm() || document.querySelector('.form-container') || document.querySelector('.form');
+  if (mount && window.MutationObserver) {
+    const mo = new MutationObserver(function () {
+      clearTimeout(mo.__t);
+      mo.__t = setTimeout(applyDecorations, 75);
+    });
+    mo.observe(mount, { childList: true, subtree: true, attributes: true });
+  }
+
+  document.addEventListener('change', function (event) {
+    const target = event.target;
+    if (target && (target.id === 'request_issue_type_select' || target.name === 'request[ticket_form_id]')) {
+      setTimeout(applyDecorations, 0);
+    }
+  });
+})();
+/* IMAGE_DESCRIPTION_FEEDBACK_FORM_END */
 

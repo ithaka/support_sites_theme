@@ -124,6 +124,27 @@
 
   }
 
+  &-callout-info {
+    background: var(--pharos-alert-color-background-info);
+    border: 1px solid var(--pharos-alert-color-border-info);
+    border-radius: var(--pharos-radius-base-standard);
+    padding: var(--pharos-spacing-1-x);
+  }
+
+  &-callout-tip {
+    background: var(--pharos-alert-color-background-success);
+    border: 1px solid var(--pharos-alert-color-border-success);
+    border-radius: var(--pharos-radius-base-standard);
+    padding: var(--pharos-spacing-1-x);
+  }
+
+  &-callout-warning {
+    background: var(--pharos-alert-color-background-warning);
+    border: 1px solid var(--pharos-alert-color-border-warning);
+    border-radius: var(--pharos-radius-base-standard);
+    padding: var(--pharos-spacing-1-x);
+  }
+
   &-content {
     line-height: 1.6;
     margin: 20px 0;

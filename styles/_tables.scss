@@ -42,3 +42,14 @@ table {
     font-size: $font-size-small;
   }
 }
+
+.table-sticky-header th {
+  position: sticky;
+  top: 0;
+  background-color: var(--pharos-color-marble-gray-94);
+  border-bottom: 1px solid var(--pharos-color-ui-40);
+}
+
+.table-highlight tr:hover {
+  background-color: var(--pharos-color-marble-gray-97);
+}

@@ -1,0 +1,270 @@
+/* PDF_ACCESSIBILITY_STYLE_START */
+
+body.pdf-a11y-form-active .container > h1:not(.contactusheader),
+body.pdf-a11y-form-active .request-sidebar,
+body.pdf-a11y-form-active .request-main > [aria-hidden="true"] {
+  display: none !important;
+}
+
+body.pdf-a11y-form-active .request-container {
+  display: block;
+}
+
+body.pdf-a11y-form-active .form-container,
+body.pdf-a11y-form-active .form {
+  max-width: 760px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-intro {
+  margin: 24px 0 28px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-kicker {
+  color: #9f120d;
+  font-family: Iowan Old Style, Baskerville, Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-intro h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-intro p,
+body.pdf-a11y-form-active .pdf-a11y-field-description,
+body.pdf-a11y-form-active .pdf-a11y-what-next {
+  color: #5f5f5f;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-required {
+  color: #1f1f1f;
+  margin-top: 18px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-link-error {
+  background: #fdf0f0;
+  border: 1px solid #d14343;
+  color: #8f0f0f;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  padding: 12px 14px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-group {
+  margin-top: 30px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-heading,
+body.pdf-a11y-form-active .form-field label,
+body.pdf-a11y-form-active [data-garden-id="forms.label"],
+body.pdf-a11y-form-active [data-garden-id="dropdowns.combobox.label"] {
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-error {
+  color: #b00020;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-field {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 0 !important;
+  width: 100% !important;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-field label,
+body.pdf-a11y-form-active .pdf-a11y-issue-field [data-garden-id="forms.label"] {
+  flex: 1 1 auto;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  order: 2;
+  text-transform: none;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-field .pdf-a11y-field-description,
+body.pdf-a11y-form-active .pdf-a11y-issue-field p {
+  display: none !important;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-field input[type="hidden"] {
+  display: none !important;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-issue-field input[type="checkbox"] {
+  flex: 0 0 auto;
+  margin: 3px 0 0;
+  order: 1;
+}
+
+body.pdf-a11y-form-active .form-field,
+body.pdf-a11y-form-active [data-garden-id="forms.field"],
+body.pdf-a11y-form-active [data-garden-id="dropdowns.combobox.field"] {
+  margin-top: 26px;
+}
+
+body.pdf-a11y-form-active textarea,
+body.pdf-a11y-form-active input[type="text"],
+body.pdf-a11y-form-active input[type="email"] {
+  border: 1px solid #8e8e8e;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+body.pdf-a11y-form-active textarea {
+  min-height: 110px;
+}
+
+body.pdf-a11y-form-active .pdf-a11y-what-next {
+  color: #1f1f1f;
+  margin: 28px 0 22px;
+}
+
+body.pdf-a11y-form-active .request-form button[type="submit"],
+body.pdf-a11y-form-active .request-form input[type="submit"] {
+  background: #9f120d;
+  border-color: #9f120d;
+}
+/* PDF_ACCESSIBILITY_STYLE_END */
+
+/* IMAGE_DESCRIPTION_FEEDBACK_STYLE_START */
+
+body.image-description-form-active .container > h1:not(.contactusheader),
+body.image-description-form-active .request-sidebar,
+body.image-description-form-active .request-main > [aria-hidden="true"] {
+  display: none !important;
+}
+
+body.image-description-form-active .request-container {
+  display: block;
+}
+
+body.image-description-form-active .form-container,
+body.image-description-form-active .form {
+  max-width: 780px;
+}
+
+body.image-description-form-active .image-description-intro {
+  margin: 24px 0 28px;
+}
+
+body.image-description-form-active .image-description-kicker {
+  color: #9f120d;
+  font-family: Iowan Old Style, Baskerville, Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+body.image-description-form-active .image-description-intro h2 {
+  color: #1f1f1f;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+body.image-description-form-active .image-description-intro p,
+body.image-description-form-active .image-description-field-description {
+  color: #6b6b6b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body.image-description-form-active .image-description-required {
+  color: #1f1f1f;
+  margin-top: 20px;
+}
+
+body.image-description-form-active .image-description-issue-group {
+  margin-top: 28px;
+}
+
+body.image-description-form-active .image-description-issue-heading,
+body.image-description-form-active .form-field label,
+body.image-description-form-active [data-garden-id="forms.label"],
+body.image-description-form-active [data-garden-id="dropdowns.combobox.label"] {
+  color: #1f1f1f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+body.image-description-form-active .image-description-issue-error {
+  color: #b00020;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+body.image-description-form-active .image-description-issue-field {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 0 !important;
+  width: 100% !important;
+}
+
+body.image-description-form-active .image-description-issue-field label,
+body.image-description-form-active .image-description-issue-field [data-garden-id="forms.label"] {
+  flex: 1 1 auto;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  order: 2;
+  text-transform: none;
+}
+
+body.image-description-form-active .image-description-issue-field .image-description-field-description,
+body.image-description-form-active .image-description-issue-field p {
+  display: none !important;
+}
+
+body.image-description-form-active .image-description-issue-field input[type="hidden"] {
+  display: none !important;
+}
+
+body.image-description-form-active .image-description-issue-field input[type="checkbox"] {
+  flex: 0 0 auto;
+  margin: 3px 0 0;
+  order: 1;
+}
+
+body.image-description-form-active .form-field,
+body.image-description-form-active [data-garden-id="forms.field"],
+body.image-description-form-active [data-garden-id="dropdowns.combobox.field"] {
+  margin-top: 26px;
+}
+
+body.image-description-form-active textarea,
+body.image-description-form-active input[type="text"],
+body.image-description-form-active input[type="email"] {
+  border: 1px solid #8e8e8e;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+body.image-description-form-active textarea {
+  min-height: 110px;
+}
+
+body.image-description-form-active .request-form button[type="submit"],
+body.image-description-form-active .request-form input[type="submit"] {
+  background: #9f120d;
+  border-color: #9f120d;
+}
+/* IMAGE_DESCRIPTION_FEEDBACK_STYLE_END */

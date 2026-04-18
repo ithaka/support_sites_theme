@@ -1,5 +1,29 @@
 #!/usr/bin/env ruby
 require 'json'
+require 'rbconfig'
+
+begin
+  require 'sassc'
+rescue LoadError
+  if ENV['SUPPORT_SITES_THEME_RBENV_REEXEC'] != '1'
+    rbenv = `command -v rbenv 2>/dev/null`.strip
+    unless rbenv.empty?
+      exec(
+        {
+          'SUPPORT_SITES_THEME_RBENV_REEXEC' => '1',
+          'PATH' => "#{File.expand_path('~/.rbenv/shims')}:#{File.expand_path('~/.rbenv/bin')}:#{ENV['PATH']}",
+        },
+        rbenv,
+        'exec',
+        'ruby',
+        __FILE__,
+        *ARGV
+      )
+    end
+  end
+  raise
+end
+
 require_relative 'stylesheet_compiler'
 
 base_dir = File.join(File.dirname(__FILE__), "..")

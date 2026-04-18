@@ -1,7 +1,7 @@
 {
-  "name": "JSTOR Support Theme based on Zendesk Copenhagen",
+  "name": "20260417 Accessibility Form Launch",
   "author": "Zendesk, ITHAKA",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [{
