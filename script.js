@@ -270,7 +270,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 (function pdfAccessibilityRequestForm() {
   const TARGET_FORM_ID = '39817828224791';
   const ISSUE_FIELD_IDS = [39817806847255, 39817773526295, 39817789561367, 39817836499863, 39817836508311, 39817836530327, 39817789610135, 39817828190359, 39817789634839, 39817836571543];
-  const IID_REGEX = new RegExp("^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$");
   const SELECTORS = {"stable": "input[name=\"request[custom_fields][39817789530647]\"]", "customName": "input[name=\"request[custom_fields][39817760991895]\"]", "iid": "input[name=\"request[custom_fields][39817789539607]\"]", "description": "textarea[name=\"request[description]\"]", "subject": "input[name=\"request[subject]\"]", "builtinEmail": "input[name=\"request[anonymous_requester_email]\"]", "builtinName": "input[name=\"request[name]\"]", "ticketForm": "input[name=\"request[ticket_form_id]\"]"};
   const CONSTANT_SUBJECT = 'Report PDF accessibility issues';
 
@@ -413,21 +412,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     }
   }
 
-  function ensureLinkError() {
-    const form = requestForm();
-    if (!form) return null;
-    let error = form.querySelector('.pdf-a11y-link-error');
-    if (!error) {
-      error = document.createElement('div');
-      error.className = 'pdf-a11y-link-error';
-      error.setAttribute('role', 'alert');
-      error.hidden = true;
-      error.textContent = 'This request link is invalid or incomplete.';
-      form.insertBefore(error, form.firstChild);
-    }
-    return error;
-  }
-
   function ensureIssueGroup() {
     const firstIssue = document.querySelector(checkboxSelector(ISSUE_FIELD_IDS[0]));
     const firstField = closestField(firstIssue);
@@ -497,21 +481,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     attachmentLike.forEach((node) => hideEl(closestField(node) || node));
   }
 
-  function iidValueStatus() {
-    const iid = document.querySelector(SELECTORS.iid);
-    const value = iid && iid.value != null ? String(iid.value) : '';
-    if (!value) return { valid: false, reason: 'missing' };
-    const valid = IID_REGEX.test(value);
-    return { valid, reason: valid ? '' : 'invalid' };
-  }
-
-  function validateIid() {
-    const error = ensureLinkError();
-    const status = iidValueStatus();
-    if (error) error.hidden = status.valid;
-    return status.valid;
-  }
-
   function decorateFields() {
     const subject = document.querySelector(SELECTORS.subject);
     if (subject) {
@@ -544,7 +513,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 
     configureBuiltinRequesterFields();
     hideAttachmentsField();
-    validateIid();
   }
 
   function hideFormSelectorAndGenericCopy() {
@@ -572,23 +540,16 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     if (!form || form.dataset.pdfA11yBound === 'true') return;
     form.dataset.pdfA11yBound = 'true';
     form.addEventListener('submit', function (event) {
-      const iidValid = validateIid();
       const issuesValid = validateIssues(form);
-      if (!iidValid || !issuesValid) {
+      if (!issuesValid) {
         event.preventDefault();
         event.stopPropagation();
-        const iidError = document.querySelector('.pdf-a11y-link-error');
-        if (iidError && !iidError.hidden) {
-          iidError.scrollIntoView({ block: 'center', behavior: 'smooth' });
-          return;
-        }
         const heading = document.querySelector('.pdf-a11y-issue-heading');
         if (heading) heading.scrollIntoView({ block: 'center', behavior: 'smooth' });
       }
     }, true);
     form.addEventListener('change', function () {
       validateIssues(form);
-      validateIid();
     });
   }
 
